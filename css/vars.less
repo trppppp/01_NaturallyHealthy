@@ -1,0 +1,46 @@
+//// VARIABLES ////
+
+@color-main: @color-green;
+@color-second: @color-dark-green;
+@color-third: @color-light-green;
+
+@s-menu-h: 100px;
+
+/// COLORES ///
+@color-green: #2f663b;
+@color-dark-green: #275130;
+@color-light-green: #cfdecc;
+
+/// MEDIA BREAKPOINTS ///
+@bp-mobile: 375px;
+@bp-tablet: 768px; //col-sm
+@bp-ipad: 1024px; //col-md
+@bp-laptop: 1366px; //col-md
+@bp-desktop: 1680px; //col-lg
+@bp-hd: 1920px;
+
+@bp-mini-end: (@bp-mobile - 1);
+@bp-mobile-end: (@bp-tablet - 1);
+@bp-tablet-end: (@bp-laptop - 1);
+@bp-laptop-end: (@bp-desktop - 1);
+@bp-desktop-end: (@bp-hd - 1);
+
+@media-mobile: ~ "only screen and (min-width: @{bp-mobile})";
+@media-tablet: ~ "only screen and (min-width: @{bp-tablet})";
+@media-ipad: ~ "only screen and (min-width: @{bp-ipad})";
+@media-laptop: ~ "only screen and (min-width: @{bp-laptop})";
+@media-desktop: ~ "only screen and (min-width: @{bp-desktop})";
+@media-hd: ~ "only screen and (min-width: @{bp-hd})";
+
+@media-only-mini: ~ "only screen and (max-width: @{bp-mini-end})";
+@media-only-mobile: ~ "only screen and (max-width: @{bp-mobile-end})";
+@media-only-handheld: ~ "only screen and (max-width: @{bp-tablet-end})";
+@media-only-tablet: ~ "only screen and (min-width: @{bp-tablet}) and (max-width: @{bp-tablet-end})";
+@media-only-laptop: ~ "only screen and (min-width: @{bp-laptop}) and (max-width: @{bp-laptop-end})";
+@media-only-desktop: ~ "only screen and (min-width: @{bp-desktop}) and (max-width: @{bp-desktop-end})";
+/// FUENTES ///
+@os-light: 300;
+@os-regular: 400;
+@os-medium: 500;
+@os-semibold: 600;
+@os-bold: 700;
