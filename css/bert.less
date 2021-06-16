@@ -105,11 +105,11 @@ body {
         &.block-catalog {
             display: flex;
             flex-direction: column;
-            padding: 5%;
+            padding: 5%;            
             height: auto;
 
-            @media @media-ipad {
-                height: calc(100% - 100px);
+            @media @media-ipad {                
+                
                 flex-direction: row;
             }
 
@@ -120,6 +120,9 @@ body {
                 flex-direction: column;
                 justify-content: flex-end;
                 margin: 10px 0;
+                max-height: calc(100vh - 140px);
+                position: relative;
+                overflow: hidden;
 
                 @media @media-ipad {
                     width: 25%;
@@ -133,15 +136,33 @@ body {
                     line-height: 1;
                     letter-spacing: 1px;
                     padding-bottom: 2%;
+                    position: absolute;
+                    margin: 20px auto;
+                    width: 100%;
+                    display: block;
+
+                    p {
+                        font-size: 25px;
+
+                        @media @media-ipad {
+                            font-size: 18px;
+                        }
+                    }
                 }
 
                 .img60 {
                     width: 60%;
                     margin: 0 auto;
+                    display: block;
+                    position: relative;
+                    margin-top: 95px;
                 }
 
                 a {
                     border-bottom: none;
+                    position: relative;
+                    overflow: hidden;
+                    display: block;
                 }
             }
         }
@@ -282,18 +303,19 @@ body {
 
         &.block-contact {
             padding: 20px;
-            height: calc(100% - 100px);
+            height: auto;            
 
             @media @media-ipad {
+                height: calc(100% - 100px);
                 max-width: 95%;
             }
 
 
             form {
-                
+
                 position: relative;
                 overflow: hidden;
-                
+
                 @media @media-ipad {
                     padding-left: 150px;
                 }
@@ -345,11 +367,11 @@ body {
                     width: 425px;
                     margin: 30px 0 85px;
                 }
-                
+
             }
 
             .contact-right {
-                
+
                 float: left;
 
                 @media @media-ipad {
@@ -362,7 +384,7 @@ body {
                 position: relative;
                 float: right;
                 background: @color-dark-green;
-                color: #ccc9c9;
+                color: white;
                 font-family: 'Roboto';
                 font-size: 22px;
                 line-height: 25px;
@@ -485,6 +507,16 @@ body {
 
 .hidden {
     display: none;
+}
+
+.text.hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out;    
+}
+
+.text {
+    max-height: 100%;
 }
 
 .page-title {

@@ -105,7 +105,6 @@ body section.block-catalog {
 }
 @media only screen and (min-width: 1024px) {
   body section.block-catalog {
-    height: calc(100% - 100px);
     flex-direction: row;
   }
 }
@@ -116,6 +115,9 @@ body section.block-catalog .element {
   flex-direction: column;
   justify-content: flex-end;
   margin: 10px 0;
+  max-height: calc(100vh - 140px);
+  position: relative;
+  overflow: hidden;
 }
 @media only screen and (min-width: 1024px) {
   body section.block-catalog .element {
@@ -130,13 +132,31 @@ body section.block-catalog .element .block-title {
   line-height: 1;
   letter-spacing: 1px;
   padding-bottom: 2%;
+  position: absolute;
+  margin: 20px auto;
+  width: 100%;
+  display: block;
+}
+body section.block-catalog .element .block-title p {
+  font-size: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-catalog .element .block-title p {
+    font-size: 18px;
+  }
 }
 body section.block-catalog .element .img60 {
   width: 60%;
   margin: 0 auto;
+  display: block;
+  position: relative;
+  margin-top: 95px;
 }
 body section.block-catalog .element a {
   border-bottom: none;
+  position: relative;
+  overflow: hidden;
+  display: block;
 }
 body section.block-product {
   top: 100px;
@@ -251,10 +271,11 @@ body section.block-product .block-compra a {
 }
 body section.block-contact {
   padding: 20px;
-  height: calc(100% - 100px);
+  height: auto;
 }
 @media only screen and (min-width: 1024px) {
   body section.block-contact {
+    height: calc(100% - 100px);
     max-width: 95%;
   }
 }
@@ -325,7 +346,7 @@ body section.block-contact textarea {
   position: relative;
   float: right;
   background: #275130;
-  color: #ccc9c9;
+  color: white;
   font-family: 'Roboto';
   font-size: 22px;
   line-height: 25px;
@@ -437,6 +458,14 @@ body h2 {
 }
 .hidden {
   display: none;
+}
+.text.hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+.text {
+  max-height: 100%;
 }
 .page-title {
   display: none;

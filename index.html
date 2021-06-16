@@ -210,9 +210,11 @@
 
 			if (textToShow.classList.contains("hidden")) {
 				textToShow.classList.remove("hidden");
+				textToShow.classList.add("shown");
 				btn.classList.remove("text-show-hidden");
 				btn.classList.add("text-hide-shown");
 			} else {
+				textToShow.classList.remove("shown");
 				textToShow.classList.add("hidden");
 				btn.classList.add("text-show-hidden");
 				btn.classList.remove("text-hide-shown");
