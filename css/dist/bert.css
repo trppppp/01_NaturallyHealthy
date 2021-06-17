@@ -295,6 +295,12 @@ body section.block-contact .contact-left {
   flex-direction: column;
   margin-right: 40px;
 }
+@media only screen and (min-width: 1920px) {
+  body section.block-contact .contact-left {
+    width: 660px;
+    margin-right: 240px;
+  }
+}
 body section.block-contact input {
   background: none;
   color: #ccc9c9;
@@ -331,6 +337,12 @@ body section.block-contact h2 {
   body section.block-contact h2 {
     width: 425px;
     margin: 30px 0 85px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  body section.block-contact h2 {
+    width: 660px;
+    margin: 105px 0 145px;
   }
 }
 body section.block-contact .contact-right {
@@ -543,20 +555,29 @@ a:hover {
   margin-top: 75px;
   display: flex;
   flex-direction: column;
-  z-index: 1;
 }
 @media only screen and (min-width: 1024px) {
   .block-products .left-70 {
     width: 70%;
     height: 100%;
     padding-left: 150px;
+    display: block;
+    margin-top: 0;
   }
 }
 @media only screen and (min-width: 1920px) {
   .block-products .left-70 {
-    justify-content: center;
-    bottom: 0;
-    padding: 0 175px;
+    padding-left: 0px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .block-products .left-70 img {
+    width: 70%;
+    margin: auto;
   }
 }
 .block-products .right-30 {
@@ -569,11 +590,8 @@ a:hover {
 }
 @media only screen and (min-width: 1024px) {
   .block-products .right-30 {
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-    bottom: 15%;
-    justify-content: center;
+    width: 30%;
+    right: 0;
   }
 }
 .block-products .right-30 a::after {
