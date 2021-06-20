@@ -16,7 +16,7 @@ body #main {
   position: relative;
 }
 body section {
-  height: calc(100% - 100px);
+  height: calc(100% - 77px);
   overflow: hidden;
   position: relative;
   border-bottom: 1px groove white;
@@ -25,7 +25,7 @@ body section {
 @media only screen and (min-width: 1024px) {
   body section {
     left: 100px;
-    width: calc(100% - 100px);
+    width: calc(100% - 77px);
   }
 }
 body section.block-apertura {
@@ -379,8 +379,8 @@ body .page-header {
   z-index: 1;
 }
 body .page-header .header-content {
-  height: 100px;
-  max-height: 100px;
+  height: 77px;
+  max-height: 77px;
   display: flex;
   max-width: 100vw;
   width: 100%;
@@ -401,6 +401,29 @@ body .page-header .brand {
 @media only screen and (min-width: 1024px) {
   body .page-header .brand {
     width: 190px;
+  }
+}
+body .page-header .brand a {
+  background-image: url(../../images/00_header-logo_mbl.png);
+  background-repeat: no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+  background-position: top;
+  background-size: contain;
+}
+@media only screen and (min-width: 1024px) {
+  body .page-header .brand a {
+    background-image: none;
+  }
+}
+body .page-header .brand a img {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  body .page-header .brand a img {
+    display: block;
   }
 }
 body .page-header .btn-menu {
@@ -498,7 +521,7 @@ a:hover {
   width: 100px;
   height: 100%;
   max-height: 100vh;
-  top: 100px;
+  top: 77px;
   left: 0;
   border-right: 1px solid white;
   z-index: 1;
