@@ -52,9 +52,9 @@ body {
 
                 @media @media-ipad {
                     padding: 0;
-                    width: 70%;
+                    width: 60%;
                     height: 100%;
-                    padding-left: 150px;
+                    padding-left: 90px;
                 }
             }
 
@@ -67,8 +67,9 @@ body {
 
                 @media @media-ipad {
                     position: relative;
-                    width: 30%;
+                    width: 35%;
                     bottom: 0;
+                    top: -370px;
                 }
             }
 
@@ -77,6 +78,22 @@ body {
                 font-size: 20px;
 
                 @media @media-ipad {
+                    position: relative;
+                    font-size: 18px;
+                    line-height: 23px;
+                    letter-spacing: 1px;
+                    top: 120px;
+                }
+
+                @media @media-laptop {
+                    top: 180px;
+                }
+
+                @media @media-desktop {
+                    top: 230px;
+                }
+
+                @media @media-hd {
                     top: 230px;
                 }
             }
@@ -88,14 +105,19 @@ body {
                 right: -190px;
 
                 @media @media-ipad {
-                    width: 136%;
-                    left: -140px;
+                    width: 181%;
+                    left: -185px;
                     position: relative;
                 }
             }
 
             h2 {
                 @media @media-ipad {
+                    width: 85%;
+                    top: 90px;
+                }
+
+                @media @media-laptop {
                     width: 75%;
                     top: 160px;
                 }
@@ -460,6 +482,7 @@ body {
 
                 img {
                     display: none;
+
                     @media @media-ipad {
                         display: block;
                     }
@@ -719,7 +742,7 @@ a:hover {
     letter-spacing: 1px;
 
     @media @media-ipad {
-        margin-top: 230px;
+        margin-top: -15px;
     }
 }
 

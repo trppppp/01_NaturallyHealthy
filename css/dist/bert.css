@@ -50,9 +50,9 @@ body section.block-apertura .left-70 {
 @media only screen and (min-width: 1024px) {
   body section.block-apertura .left-70 {
     padding: 0;
-    width: 70%;
+    width: 60%;
     height: 100%;
-    padding-left: 150px;
+    padding-left: 90px;
   }
 }
 body section.block-apertura .right-30 {
@@ -65,8 +65,9 @@ body section.block-apertura .right-30 {
 @media only screen and (min-width: 1024px) {
   body section.block-apertura .right-30 {
     position: relative;
-    width: 30%;
+    width: 35%;
     bottom: 0;
+    top: -370px;
   }
 }
 body section.block-apertura p {
@@ -74,6 +75,25 @@ body section.block-apertura p {
   font-size: 20px;
 }
 @media only screen and (min-width: 1024px) {
+  body section.block-apertura p {
+    position: relative;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 1px;
+    top: 120px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  body section.block-apertura p {
+    top: 180px;
+  }
+}
+@media only screen and (min-width: 1680px) {
+  body section.block-apertura p {
+    top: 230px;
+  }
+}
+@media only screen and (min-width: 1920px) {
   body section.block-apertura p {
     top: 230px;
   }
@@ -86,12 +106,18 @@ body section.block-apertura img {
 }
 @media only screen and (min-width: 1024px) {
   body section.block-apertura img {
-    width: 136%;
-    left: -140px;
+    width: 181%;
+    left: -185px;
     position: relative;
   }
 }
 @media only screen and (min-width: 1024px) {
+  body section.block-apertura h2 {
+    width: 85%;
+    top: 90px;
+  }
+}
+@media only screen and (min-width: 1366px) {
   body section.block-apertura h2 {
     width: 75%;
     top: 160px;
@@ -646,7 +672,7 @@ a:hover {
 }
 @media only screen and (min-width: 1024px) {
   .text-hide-shown {
-    margin-top: 230px;
+    margin-top: -15px;
   }
 }
 .text-hide-shown p::after {
