@@ -405,14 +405,26 @@ body .page-header {
   z-index: 1;
 }
 body .page-header .header-content {
-  height: 100px;
-  max-height: 100px;
+  height: 77px;
+  max-height: 77px;
   display: flex;
   max-width: 100vw;
   width: 100%;
   vertical-align: middle;
   border-bottom: 1px solid white;
   border-top: 1px solid white;
+  background: rgba(0, 0, 0, 0.9);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+@media only screen and (min-width: 1024px) {
+  body .page-header .header-content {
+    height: 100px;
+    max-height: 100px;
+  }
 }
 body .page-header .menu {
   display: none;
@@ -649,7 +661,6 @@ a:hover {
 }
 .text-show-hidden {
   position: relative;
-  text-decoration: underline;
   cursor: pointer;
   font-size: 25px;
   letter-spacing: 1px;
@@ -659,13 +670,17 @@ a:hover {
     top: 0;
   }
 }
+.text-show-hidden p {
+  border-bottom: 1px solid white;
+  line-height: 30px;
+  width: fit-content;
+}
 .text-show-hidden p::after {
   content: "+";
   padding-left: 80px;
 }
 .text-hide-shown {
   position: relative;
-  text-decoration: underline;
   cursor: pointer;
   font-size: 25px;
   letter-spacing: 1px;
@@ -674,6 +689,11 @@ a:hover {
   .text-hide-shown {
     margin-top: -15px;
   }
+}
+.text-hide-shown p {
+  border-bottom: 1px solid white;
+  line-height: 30px;
+  width: fit-content;
 }
 .text-hide-shown p::after {
   content: "-";

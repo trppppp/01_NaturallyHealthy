@@ -45,3 +45,53 @@
 @os-medium: 500;
 @os-semibold: 600;
 @os-bold: 700;
+
+/// GRADIENTE ///
+.Gradient(@direction: to top; @fallback: rgba(0,0,0,0.9); @stops) {
+    background: @fallback;
+    .gradient-browser-support(@direction; @stops);
+    background: linear-gradient(@direction, @stops);
+}
+
+.gradient-browser-support(~'to right'; @stops) {
+    background: -webkit-linear-gradient(left, @stops);
+    background: -moz-linear-gradient(left, @stops);
+    background: -ms-linear-gradient(left, @stops);
+    background: -o-linear-gradient(left, @stops);
+}
+
+.gradient-browser-support(~'to left'; @stops) {
+    background: -webkit-linear-gradient(right, @stops);
+    background: -moz-linear-gradient(right, @stops);
+    background: -ms-linear-gradient(right, @stops);
+    background: -o-linear-gradient(right, @stops);
+}
+
+.gradient-browser-support(~'to top'; @stops) {
+    background: -webkit-linear-gradient(bottom, @stops);
+    background: -moz-linear-gradient(bottom, @stops);
+    background: -ms-linear-gradient(bottom, @stops);
+    background: -o-linear-gradient(bottom, @stops);
+}
+
+.gradient-browser-support(~'to bottom'; @stops) {
+    background: -webkit-linear-gradient(top, @stops);
+    background: -moz-linear-gradient(top, @stops);
+    background: -ms-linear-gradient(top, @stops);
+    background: -o-linear-gradient(top, @stops);
+}
+
+.gradient-browser-support(@direction, @stops) when (default()) {
+    background: -webkit-linear-gradient(@direction, @stops);
+    background: -moz-linear-gradient(@direction, @stops);
+    background: -ms-linear-gradient(@direction, @stops);
+    background: -o-linear-gradient(@direction, @stops);
+}
+
+.gradient-title(@direction: to bottom; @fallback: @color-yellow-exclusivo; @stops: ~"@{color-yellow-exclusivo}, @{color-brown-exclusivo} 104%") {
+    background: none;
+    .Gradient(@direction, @fallback, @stops);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.4;
+}
