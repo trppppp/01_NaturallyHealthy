@@ -37,7 +37,7 @@ body {
             height: auto;
 
             @media @media-ipad {
-                height: 100%;
+                
             }
 
             .left-70 {
@@ -66,10 +66,10 @@ body {
                 top: 0;
 
                 @media @media-ipad {
-                    position: relative;
-                    width: 35%;
-                    bottom: 0;
+                    position: absolute;
+                    width: 35%;                    
                     top: -370px;
+                    right: 0;
                 }
             }
 
@@ -81,21 +81,26 @@ body {
                     position: relative;
                     font-size: 18px;
                     line-height: 23px;
-                    letter-spacing: 1px;
-                    top: 120px;
+                    letter-spacing: 1px;                    
                 }
 
-                @media @media-laptop {
-                    top: 180px;
-                }
+                &:first-child {
+                    @media @media-ipad {
+                        margin-top: 30px;
+                    }
 
-                @media @media-desktop {
-                    top: 230px;
-                }
-
-                @media @media-hd {
-                    top: 230px;
-                }
+                    @media @media-laptop {
+                        margin-top: 70px;
+                    }
+    
+                    @media @media-desktop {
+                        margin-top: 100px;
+                    }
+    
+                    @media @media-hd {
+                        margin-top: 120px;
+                    }
+                }                
             }
 
             img {
@@ -114,12 +119,12 @@ body {
             h2 {
                 @media @media-ipad {
                     width: 85%;
-                    top: 90px;
+                    margin-top: 90px;
                 }
 
                 @media @media-laptop {
                     width: 75%;
-                    top: 160px;
+                    margin-top: 160px;
                 }
             }
         }
@@ -571,7 +576,7 @@ body {
     display: none;
 }
 
-.text.hidden {
+#text.hidden {
     max-height: 0;
     overflow: hidden;
     transition: max-height 1s ease-out;
@@ -579,6 +584,7 @@ body {
 
 .text {
     max-height: 100%;
+    transition: max-height 1s ease-in;
 }
 
 .page-title {

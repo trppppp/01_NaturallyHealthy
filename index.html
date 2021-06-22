@@ -214,10 +214,12 @@
 			if (textToShow.classList.contains("hidden")) {
 				textToShow.classList.remove("hidden");
 				textToShow.classList.add("shown");
+				// textToShow.style.maxHeight = "100%";
 				btn.classList.remove("text-show-hidden");
 				btn.classList.add("text-hide-shown");
 			} else {
 				textToShow.classList.remove("shown");
+				// textToShow.style.maxHeight = "0";
 				textToShow.classList.add("hidden");
 				btn.classList.add("text-show-hidden");
 				btn.classList.remove("text-hide-shown");
