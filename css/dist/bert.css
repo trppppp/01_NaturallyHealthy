@@ -7,6 +7,34 @@ body {
   padding: 0;
   height: 100vh;
 }
+body .menu-container {
+  width: 100%;
+  position: absolute;
+  height: calc(100vh - 100px);
+  margin-top: 100px;
+  left: 100px;
+}
+body .menu-container ul {
+  position: relative;
+}
+body .menu-container .element {
+  width: 25%;
+  float: left;
+}
+body .menu-container .products-container {
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+body .menu-container .menu-title {
+  float: left;
+}
+body .menu-container .menu-down {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
 body #main {
   width: 100%;
   /* sin incluir menu */
@@ -122,6 +150,64 @@ body section.block-apertura img {
     margin-top: 160px;
   }
 }
+body section.block-products .left-70 {
+  margin: 0;
+  padding: 0px;
+  float: left;
+  position: relative;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-products .left-70 {
+    width: 70%;
+    height: 100%;
+    padding-left: 150px;
+    display: block;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  body section.block-products .left-70 {
+    width: 60%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  body section.block-products .left-70 {
+    padding-left: 0px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  body section.block-products .left-70 img {
+    width: 70%;
+    margin: auto;
+  }
+}
+body section.block-products .right-30 {
+  text-align: center;
+  width: 100%;
+  height: initial;
+  position: absolute;
+  display: block;
+  bottom: 80px;
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-products .right-30 {
+    width: 30%;
+    right: 0;
+  }
+}
+body section.block-products .right-30 a::after {
+  content: " -->";
+}
 body section.block-catalog {
   display: flex;
   flex-direction: column;
@@ -182,6 +268,108 @@ body section.block-catalog .element a {
   position: relative;
   overflow: hidden;
   display: block;
+}
+body section.block-contact {
+  padding: 20px;
+  height: auto;
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-contact {
+    height: calc(100% - 100px);
+    max-width: 95%;
+  }
+}
+body section.block-contact form {
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-contact form {
+    padding-left: 150px;
+  }
+}
+body section.block-contact .contact-left {
+  width: 425px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+@media only screen and (min-width: 1920px) {
+  body section.block-contact .contact-left {
+    width: 660px;
+    margin-right: 240px;
+  }
+}
+body section.block-contact input {
+  background: none;
+  color: #ccc9c9;
+  font-family: 'Roboto';
+  font-size: 22px;
+  line-height: 25px;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+body section.block-contact input[type="submit"] {
+  background: white;
+  color: #2f663b;
+  font-family: 'Roboto';
+  font-size: 22px;
+  line-height: 25px;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #275130;
+  border-bottom-style: solid;
+  letter-spacing: 1px;
+  padding: 12px 110px;
+  margin: 0;
+  font-weight: 300;
+  float: right;
+}
+body section.block-contact h2 {
+  margin: 30px 0 25px;
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-contact h2 {
+    width: 425px;
+    margin: 30px 0 85px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  body section.block-contact h2 {
+    width: 660px;
+    margin: 105px 0 145px;
+  }
+}
+body section.block-contact .contact-right {
+  float: left;
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-contact .contact-right {
+    width: 50%;
+  }
+}
+body section.block-contact textarea {
+  width: 100%;
+  position: relative;
+  float: right;
+  background: #275130;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 22px;
+  line-height: 25px;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  height: 250px;
+  padding: 10px;
 }
 body section.block-product {
   top: 100px;
@@ -293,108 +481,6 @@ body section.block-product .block-compra .link-amazon p {
 }
 body section.block-product .block-compra a {
   width: 100%;
-}
-body section.block-contact {
-  padding: 20px;
-  height: auto;
-}
-@media only screen and (min-width: 1024px) {
-  body section.block-contact {
-    height: calc(100% - 100px);
-    max-width: 95%;
-  }
-}
-body section.block-contact form {
-  position: relative;
-  overflow: hidden;
-}
-@media only screen and (min-width: 1024px) {
-  body section.block-contact form {
-    padding-left: 150px;
-  }
-}
-body section.block-contact .contact-left {
-  width: 425px;
-  float: left;
-  display: flex;
-  flex-direction: column;
-  margin-right: 40px;
-}
-@media only screen and (min-width: 1920px) {
-  body section.block-contact .contact-left {
-    width: 660px;
-    margin-right: 240px;
-  }
-}
-body section.block-contact input {
-  background: none;
-  color: #ccc9c9;
-  font-family: 'Roboto';
-  font-size: 22px;
-  line-height: 25px;
-  border: none;
-  border-bottom-width: 1px;
-  border-bottom-color: white;
-  border-bottom-style: solid;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-body section.block-contact input[type="submit"] {
-  background: white;
-  color: #2f663b;
-  font-family: 'Roboto';
-  font-size: 22px;
-  line-height: 25px;
-  border: none;
-  border-bottom-width: 1px;
-  border-bottom-color: #275130;
-  border-bottom-style: solid;
-  letter-spacing: 1px;
-  padding: 12px 110px;
-  margin: 0;
-  font-weight: 300;
-  float: right;
-}
-body section.block-contact h2 {
-  margin: 30px 0 25px;
-}
-@media only screen and (min-width: 1024px) {
-  body section.block-contact h2 {
-    width: 425px;
-    margin: 30px 0 85px;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  body section.block-contact h2 {
-    width: 660px;
-    margin: 105px 0 145px;
-  }
-}
-body section.block-contact .contact-right {
-  float: left;
-}
-@media only screen and (min-width: 1024px) {
-  body section.block-contact .contact-right {
-    width: 50%;
-  }
-}
-body section.block-contact textarea {
-  width: 100%;
-  position: relative;
-  float: right;
-  background: #275130;
-  color: white;
-  font-family: 'Roboto';
-  font-size: 22px;
-  line-height: 25px;
-  border: none;
-  border-bottom-width: 1px;
-  border-bottom-color: white;
-  border-bottom-style: solid;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-  height: 250px;
-  padding: 10px;
 }
 body .page-header {
   position: fixed;
@@ -608,56 +694,6 @@ a:hover {
   height: 175%;
   float: left;
   position: relative;
-}
-.block-products .left-70 {
-  margin: 0;
-  padding: 0px;
-  float: left;
-  position: relative;
-  margin-top: 75px;
-  display: flex;
-  flex-direction: column;
-}
-@media only screen and (min-width: 1024px) {
-  .block-products .left-70 {
-    width: 70%;
-    height: 100%;
-    padding-left: 150px;
-    display: block;
-    margin-top: 0;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  .block-products .left-70 {
-    padding-left: 0px;
-    width: 70%;
-    height: 100%;
-    display: flex;
-    margin-top: 0;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  .block-products .left-70 img {
-    width: 70%;
-    margin: auto;
-  }
-}
-.block-products .right-30 {
-  text-align: center;
-  width: 100%;
-  height: initial;
-  position: absolute;
-  display: block;
-  bottom: 80px;
-}
-@media only screen and (min-width: 1024px) {
-  .block-products .right-30 {
-    width: 30%;
-    right: 0;
-  }
-}
-.block-products .right-30 a::after {
-  content: " -->";
 }
 .text-show-hidden {
   position: relative;

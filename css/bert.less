@@ -11,6 +11,40 @@ body {
 
     @media @media-ipad {}
 
+    .menu-container {
+            width: 100%;
+            position: absolute;
+            height: calc(100vh - 100px);
+            margin-top: 100px;
+            left: 100px;
+        
+        
+        ul {
+            position: relative;
+        }
+        
+        .element {
+            width: 25%;
+            float: left;
+        }
+        .products-container {
+            position: relative;
+            overflow: hidden;
+            float: left;
+        }
+        
+        .menu-title {
+            float: left;
+        }
+        
+        .menu-down {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: block;
+        }
+    }
+
     #main {
         width: 100%;
         /* sin incluir menu */
@@ -129,6 +163,68 @@ body {
             }
         }
 
+        &.block-products {
+            .left-70 {
+                margin: 0;
+                padding: 0px;
+                float: left;
+                position: relative;
+                margin-top: 75px;
+                display: flex;
+                flex-direction: column;
+                // z-index: 1;
+        
+                @media @media-ipad {
+                    width: 70%;
+                    height: 100%;
+                    padding-left: 150px;
+                    display: block;
+                    margin-top: 0;
+                }
+
+                @media @media-laptop {
+                    width: 60%;
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                }
+        
+                @media @media-hd {
+                    padding-left: 0px;
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    margin-top: 0;
+                }
+        
+                img {
+                    @media @media-hd {
+                        width: 70%;
+                        margin: auto;
+                    }
+                }
+            }
+        
+            .right-30 {
+                text-align: center;
+                width: 100%;
+                height: initial;
+                position: absolute;
+                display: block;
+                bottom: 80px;
+        
+                @media @media-ipad {
+                    width: 30%;
+                    right: 0;
+                }
+        
+                a::after {
+                    content: " -->";
+                }
+        
+            }
+        }
+
         &.block-catalog {
             display: flex;
             flex-direction: column;
@@ -136,7 +232,6 @@ body {
             height: auto;
 
             @media @media-ipad {
-
                 flex-direction: row;
             }
 
@@ -191,6 +286,115 @@ body {
                     overflow: hidden;
                     display: block;
                 }
+            }
+        }
+
+        &.block-contact {
+            padding: 20px;
+            height: auto;
+
+            @media @media-ipad {
+                height: calc(100% - 100px);
+                max-width: 95%;
+            }
+
+            @media @media-hd {}
+
+
+            form {
+
+                position: relative;
+                overflow: hidden;
+
+                @media @media-ipad {
+                    padding-left: 150px;
+                }
+            }
+
+            .contact-left {
+                width: 425px;
+                float: left;
+                display: flex;
+                flex-direction: column;
+                margin-right: 40px;
+
+                @media @media-hd {
+                    width: 660px;
+                    margin-right: 240px;
+                }
+            }
+
+            input {
+                background: none;
+                color: #ccc9c9;
+                font-family: 'Roboto';
+                font-size: 22px;
+                line-height: 25px;
+                border: none;
+                border-bottom-width: 1px;
+                border-bottom-color: white;
+                border-bottom-style: solid;
+                margin-bottom: 40px;
+                letter-spacing: 1px;
+            }
+
+            input[type="submit"] {
+                background: white;
+                color: @color-green;
+                font-family: 'Roboto';
+                font-size: 22px;
+                line-height: 25px;
+                border: none;
+                border-bottom-width: 1px;
+                border-bottom-color: @color-dark-green;
+                border-bottom-style: solid;
+                letter-spacing: 1px;
+                padding: 12px 110px;
+                margin: 0;
+                font-weight: 300;
+                float: right;
+            }
+
+            h2 {
+                margin: 30px 0 25px;
+
+                @media @media-ipad {
+                    width: 425px;
+                    margin: 30px 0 85px;
+                }
+
+                @media @media-hd {
+                    width: 660px;
+                    margin: 105px 0 145px;
+                }
+            }
+
+            .contact-right {
+
+                float: left;
+
+                @media @media-ipad {
+                    width: 50%;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                position: relative;
+                float: right;
+                background: @color-dark-green;
+                color: white;
+                font-family: 'Roboto';
+                font-size: 22px;
+                line-height: 25px;
+                border: none;
+                border-bottom-width: 1px;
+                border-bottom-color: white;
+                border-bottom-style: solid;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+                height: 250px;
+                padding: 10px;
             }
         }
 
@@ -325,115 +529,6 @@ body {
                 a {
                     width: 100%;
                 }
-            }
-        }
-
-        &.block-contact {
-            padding: 20px;
-            height: auto;
-
-            @media @media-ipad {
-                height: calc(100% - 100px);
-                max-width: 95%;
-            }
-
-            @media @media-hd {}
-
-
-            form {
-
-                position: relative;
-                overflow: hidden;
-
-                @media @media-ipad {
-                    padding-left: 150px;
-                }
-            }
-
-            .contact-left {
-                width: 425px;
-                float: left;
-                display: flex;
-                flex-direction: column;
-                margin-right: 40px;
-
-                @media @media-hd {
-                    width: 660px;
-                    margin-right: 240px;
-                }
-            }
-
-            input {
-                background: none;
-                color: #ccc9c9;
-                font-family: 'Roboto';
-                font-size: 22px;
-                line-height: 25px;
-                border: none;
-                border-bottom-width: 1px;
-                border-bottom-color: white;
-                border-bottom-style: solid;
-                margin-bottom: 40px;
-                letter-spacing: 1px;
-            }
-
-            input[type="submit"] {
-                background: white;
-                color: @color-green;
-                font-family: 'Roboto';
-                font-size: 22px;
-                line-height: 25px;
-                border: none;
-                border-bottom-width: 1px;
-                border-bottom-color: @color-dark-green;
-                border-bottom-style: solid;
-                letter-spacing: 1px;
-                padding: 12px 110px;
-                margin: 0;
-                font-weight: 300;
-                float: right;
-            }
-
-            h2 {
-                margin: 30px 0 25px;
-
-                @media @media-ipad {
-                    width: 425px;
-                    margin: 30px 0 85px;
-                }
-
-                @media @media-hd {
-                    width: 660px;
-                    margin: 105px 0 145px;
-                }
-            }
-
-            .contact-right {
-
-                float: left;
-
-                @media @media-ipad {
-                    width: 50%;
-                }
-            }
-
-            textarea {
-                width: 100%;
-                position: relative;
-                float: right;
-                background: @color-dark-green;
-                color: white;
-                font-family: 'Roboto';
-                font-size: 22px;
-                line-height: 25px;
-                border: none;
-                border-bottom-width: 1px;
-                border-bottom-color: white;
-                border-bottom-style: solid;
-                margin-bottom: 20px;
-                letter-spacing: 1px;
-                height: 250px;
-                padding: 10px;
             }
         }
     }
@@ -671,60 +766,7 @@ a:hover {
     position: relative;
 }
 
-.block-products {
-    .left-70 {
-        margin: 0;
-        padding: 0px;
-        float: left;
-        position: relative;
-        margin-top: 75px;
-        display: flex;
-        flex-direction: column;
-        // z-index: 1;
 
-        @media @media-ipad {
-            width: 70%;
-            height: 100%;
-            padding-left: 150px;
-            display: block;
-            margin-top: 0;
-        }
-
-        @media @media-hd {
-            padding-left: 0px;
-            width: 70%;
-            height: 100%;
-            display: flex;
-            margin-top: 0;
-        }
-
-        img {
-            @media @media-hd {
-                width: 70%;
-                margin: auto;
-            }
-        }
-    }
-
-    .right-30 {
-        text-align: center;
-        width: 100%;
-        height: initial;
-        position: absolute;
-        display: block;
-        bottom: 80px;
-
-        @media @media-ipad {
-            width: 30%;
-            right: 0;
-        }
-
-        a::after {
-            content: " -->";
-        }
-
-    }
-}
 
 .text-show-hidden {
     position: relative;
