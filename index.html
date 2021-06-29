@@ -39,13 +39,13 @@
 				<a id="lang-en" class="lang" aria-label="Menu">EN</a>
 				<a id="lang-fr" class="lang" aria-label="Menu">FR</a>
 			</div>
-			<div id="" class="btn-menu">
-				<a id="menu" class="navbar-toggle" aria-label="Menu">Menu</a>
+			<div id="btn-menu" class="btn-menu" onclick="toggleMenu()">
+				<a id="" class="navbar-toggle" aria-label="Menu">Menu</a>
 			</div>
 			<!-- START: menu principal -->
-			<nav id="menu" class="menu" role="navigation">
+			<nav id="menu" class="menu hidden" role="navigation">
 
-				<div class="menu-container bg-dark-green">
+				<div class="menu-container">
 					<div class="menu-top">
 						<div class="menu-title">
 							<p>Naturally Healthy</p>
@@ -58,27 +58,27 @@
 					</div>
 					<div class="menu-down">
 						<div class="menu-title">
-							<p>Nuestro Productos</p>
+							<p>Nuestros Productos</p>
 						</div>
 						<div class="products-container">
-							<div class="element bg-dark-green">
+							<div class="element">
 								<a href="/argan.html">
 									<img class="img60" src="images/03_ACEITE_argan_catalogo.png" alt="Aceite de Argán">
 								</a>
 							</div>
-							<div class="element bg-dark-green">
+							<div class="element">
 								<a href="/almendra.html">
 									<img class="img60" src="images/03_ACEITE_almendra_catalogo.png"
 										alt="Aceite de Almendra">
 								</a>
 							</div>
-							<div class="element bg-dark-green">
+							<div class="element">
 								<a href="/aguacate.html">
 									<img class="img60" src="images/03_ACEITE_aguacate_catalogo.png"
 										alt="Aceite de Aguacate">
 								</a>
 							</div>
-							<div class="element bg-dark-green">
+							<div class="element">
 								<a href="/calabaza.html">
 									<img class="img60" src="images/03_ACEITE_calabaza_catalogo.png"
 										alt="Aceite de Calabaza">
@@ -225,6 +225,17 @@
 				btn.classList.add("text-show-hidden");
 				btn.classList.remove("text-hide-shown");
 			}
+		}
+
+		function toggleMenu() {
+			var menu = document.getElementById("menu");
+			var btnMenu = document.getElementById("btn-menu");
+
+			if (menu.classList.contains("hidden")) {
+				menu.classList.remove("hidden");				
+			} else {
+				menu.classList.add("hidden");
+			}			
 		}
 	</script>
 
