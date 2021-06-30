@@ -14,17 +14,23 @@ body {
     .menu-container {
         width: 100%;
         position: absolute;
-        height: calc(100vh - 100px);
-        margin-top: 100px;
-        left: 100px;
+        height: calc(100vh - 76px);
+        margin-top: 76px;
+        left: 0;
         background: @color-green;
+
+        @media @media-ipad {
+            height: calc(100vh - 100px);
+            margin-top: 100px;
+            left: 100px;
+        }
 
         .menu-top {
             border-bottom: 1px solid white;
+            height: 40%;
 
             @media @media-ipad {
-                width: calc(100% - 100px);
-                height: 40%;
+                width: calc(100% - 100px);                
             }
         }
 
@@ -45,6 +51,10 @@ body {
                 border-bottom: none;
                 font-size: 32px;
                 line-height: 55px;
+
+                @media @media-desktop {
+                    line-height: 100px;
+                }
             }
         }
 
@@ -70,21 +80,40 @@ body {
             overflow: hidden;
             float: left;
             width: 83%;
+            height: 100%;
         }
 
         .element {
             width: 25%;
             float: left;
             padding: 30px;
-            max-height: 345px;
+            position: relative;
+            max-height: 100%;
+            height: 100%;
+
+            @media @media-ipad {
+                padding-bottom: 0;
+            }
+
+
 
             a {
                 background-color: @color-dark-green;
                 display: block;
+                height: 100%;
+                border: none;
 
                 img {
                     width: 85%;
                     margin: 0 auto;
+
+                    @media @media-ipad {
+                        width: 75%;
+                    }
+
+                    @media @media-desktop {
+                        width: 65%;
+                    }
                 }
             }
         }
@@ -96,22 +125,34 @@ body {
             bottom: 0;
             left: 0;
 
+            @media @media-only-handheld {
+                display: flex;
+                align-content: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+
             @media @media-ipad {
                 width: 17%;
             }
 
             p {
+                -webkit-transform: rotate(-90deg);
+                -moz-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+
                 @media @media-ipad {
-                    -webkit-transform: rotate(-90deg);
-                    -moz-transform: rotate(-90deg);
-                    -ms-transform: rotate(-90deg);
-                    -o-transform: rotate(-90deg);
-                    transform: rotate(-90deg);
-                    left: 70px;
                     bottom: 90px;
                     margin-left: 0;
                     width: fit-content;
                     position: absolute;
+                    right: 0;
+                }
+
+                @media @media-desktop {
+                    font-size: 20px;
                 }
             }
         }
@@ -739,6 +780,12 @@ body {
 
 .hidden {
     display: none;
+}
+
+.xs-hidden {
+    @media @media-only-mobile {
+        display: none;
+    }
 }
 
 #text.hidden {
