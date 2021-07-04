@@ -30,7 +30,7 @@ body {
             height: 40%;
 
             @media @media-ipad {
-                width: calc(100% - 100px);                
+                width: calc(100% - 100px);
             }
         }
 
@@ -168,7 +168,6 @@ body {
     }
 
     section {
-        height: calc(100% - @s-menu-h);
         overflow: hidden;
         position: relative;
         border-bottom: 1px groove white;
@@ -319,14 +318,23 @@ body {
             .right-30 {
                 text-align: center;
                 width: 100%;
-                height: initial;
-                position: absolute;
-                display: block;
-                bottom: 80px;
 
                 @media @media-ipad {
+                    height: initial;
+                    position: absolute;
+                    display: block;
+                    bottom: 80px;
                     width: 30%;
                     right: 0;
+                }
+
+                div {
+                    @media @media-only-handheld {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100px;
+                    }
                 }
 
                 a::after {
@@ -510,29 +518,74 @@ body {
         }
 
         &.block-product {
-            top: 100px;
+            margin-top: 110px;
+
+            @media @media-only-handheld {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @media @media-ipad {
+                margin-top: 100px;
+            }
+
+            .header-mbl {
+                a {
+                    &::before {
+                        content: "< ";
+                    }
+                }
+
+                @media @media-ipad {
+                    display: none;
+                }
+
+                h2 {
+                    margin-top: 15px;
+                }
+            }
 
             .left-40 {
-                width: 40%;
-                float: left;
-                padding-left: 90px;
+                width: 70%;
+                overflow: hidden;
+
+                @media @media-ipad {
+                    width: 40%;
+                    float: left;
+                    padding-left: 90px;
+                }
 
                 .img65 {
-                    width: 65%;
-                    margin: 90px auto;
+                    @media @media-ipad {
+                        width: 65%;
+                        margin: 90px auto;
+                    }
                 }
             }
 
             .right-60 {
-                float: left;
-                width: 60%;
-                height: 100%;
-                padding: 50px 50px 0 0;
-                position: relative;
+                padding: 0 30px;
+
+                @media @media-only-handheld {
+                    margin-top: -180px;                    
+                }
+
+                @media @media-ipad {
+                    float: left;
+                    width: 60%;
+                    height: 100%;
+                    padding: 50px 50px 0 0;
+                    position: relative;
+                }
 
                 .link.back a {
                     font-size: 1em;
                     font-weight: 300;
+
+                    @media @media-only-handheld {
+                        display: none;
+                    }
 
                     &::before {
                         content: "< ";
@@ -543,6 +596,10 @@ body {
                     margin-bottom: 30px;
 
                     h2 {
+                        @media @media-only-handheld {
+                            display: none;
+                        }
+
                         font-weight: 300;
                         font-size: 45px;
                         margin-bottom: 22px;
@@ -555,22 +612,33 @@ body {
             }
 
             .cols-2 {
-                overflow: hidden;
                 position: relative;
 
+                @media @media-ipad {
+                    overflow: hidden;
+                }
+
                 .col-left {
-                    width: 50%;
-                    float: left;
-                    padding-right: 15px;
+                    @media @media-ipad {
+                        width: 50%;
+                        float: left;
+                        padding-right: 15px;
+                    }
                 }
 
                 .col-right {
-                    width: 50%;
-                    float: left;
-                    padding-left: 15px;
-                    height: 270px;
-                    overflow: hidden;
-                    position: relative;
+                    @media @media-only-handheld {                        
+                        margin-bottom: 130px;
+                    }
+
+                    @media @media-ipad {
+                        width: 50%;
+                        float: left;
+                        padding-left: 15px;
+                        height: 270px;
+                        overflow: hidden;
+                        position: relative;
+                    }
 
                     a {
                         bottom: 0;
@@ -593,11 +661,18 @@ body {
                 }
             }
 
-            .bottom {
-                bottom: 0;
+            .bottom {                
                 position: absolute;
-                width: 100%;
-                padding-right: 50px;
+                bottom: 0;                
+                width: 100%;         
+
+                @media @media-only-handheld {
+                    margin: 0 -30px;
+                }
+
+                @media @media-ipad {
+                    padding-right: 50px;                    
+                }       
             }
 
             .block-compra {
@@ -743,14 +818,14 @@ body {
 
     h2 {
         font-size: 45px;
-        font-family: 'Sumana';
         font-weight: 300;
         line-height: 1;
-        width: 75%;
         margin: 0;
         position: relative;
 
         @media @media-ipad {
+            font-family: 'Sumana';
+            width: 75%;
             font-size: 75px;
         }
 

@@ -34,53 +34,54 @@
 				<a id="lang-en" class="lang" aria-label="Menu">EN</a>
 				<a id="lang-fr" class="lang" aria-label="Menu">FR</a>
 			</div>
-			<div id="" class="btn-menu">
-				<a id="menu" class="navbar-toggle" aria-label="Menu">Menu</a>
+			<div id="btn-menu" class="btn-menu" onclick="toggleMenu()">
+				<a id="" class="navbar-toggle" aria-label="Menu">Menu</a>
 			</div>
 			<!-- START: menu principal -->
 			<nav id="menu" class="menu hidden" role="navigation">
 
-				<div class="menuComplete">
-					<h2 class="menu-title">Secciones</h2>
-					<ul class="n1 col-xs-12 col-sm-12 col-md-8 col-lg-8">
-						<li><a href="/actualidad" title="Noticias de actualidad">Conócenos</a></li>
-						<li class="cat-86"><a href="/actualidad/casas-reales">Recetas</a></li>
-						<li class="desplegable open"><a href="/blogs">Nuestros Productos</a>
-							<ul class="n2">
-								<li class="menu-image cat-15">
-									<img data-src="/medio/2020/10/01/jorge-javier-vazquez_3b33888b_200x200.png"
-										src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-										class="menu-img lazyload">
-									<noscript><img
-											src="/medio/2020/10/01/jorge-javier-vazquez_3b33888b_200x200.png" /></noscript>
-									<a href="/productos#aceite-uno" title="Aceite Uno">Aceite Uno</a>
-								</li>
-								<li class="menu-image cat-49">
-									<img data-src="/medio/2020/10/01/pilar-eyre_066ffbe0_200x200.png"
-										src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-										class="menu-img lazyload">
-									<noscript><img src="/medio/2020/10/01/pilar-eyre_066ffbe0_200x200.png" /></noscript>
-									<a href="/productos#aceite-dos" title="Aceite Dos">Aceite Dos</a>
-								</li>
-								<li class="menu-image cat-48">
-									<img data-src="/medio/2021/01/08/mila_1f50efc3_200x200.png"
-										src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-										class="menu-img lazyload">
-									<noscript><img src="/medio/2021/01/08/mila_1f50efc3_200x200.png" /></noscript>
-									<a href="/productos#aceite-tres" title="Aceite Tres">Aceite Tres</a>
-								</li>
-								<li class="menu-image cat-94">
-									<img data-src="/medio/2021/04/13/terelu-campos_6175d0b1_200x200.png"
-										src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-										class="menu-img lazyload"><noscript><img
-											src="/medio/2021/04/13/terelu-campos_6175d0b1_200x200.png" /></noscript><a
-										href="/productos#aceite-cuatro" title="Aceite Cuatro">Aceite Cuatro</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<!-- Share menu burger-->
-
+				<div class="menu-container">
+					<div class="menu-top">
+						<div class="menu-title">
+							<p>Naturally Healthy</p>
+						</div>
+						<ul class="">
+							<li><a href="/#block-apertura" title="Conócenos">Conócenos</a></li>
+							<li class=""><a href="/#productos">Productos</a></li>
+							<li class=""><a href="/#Contacto">Contacto</a></li>
+						</ul>
+					</div>
+					<div class="menu-down">
+						<div class="menu-title">
+							<p class="xs-hidden">Nuestros Productos</p>
+						</div>
+						<div class="products-container xs-hidden">
+							<div class="element">
+								<a href="/argan.html">
+									<img class="img60" src="images/03_ACEITE_argan_catalogo.png" alt="Aceite de Argán">
+								</a>
+							</div>
+							<div class="element">
+								<a href="/almendra.html">
+									<img class="img60" src="images/03_ACEITE_almendra_catalogo.png"
+										alt="Aceite de Almendra">
+								</a>
+							</div>
+							<div class="element">
+								<a href="/aguacate.html">
+									<img class="img60" src="images/03_ACEITE_aguacate_catalogo.png"
+										alt="Aceite de Aguacate">
+								</a>
+							</div>
+							<div class="element">
+								<a href="/calabaza.html">
+									<img class="img60" src="images/03_ACEITE_calabaza_catalogo.png"
+										alt="Aceite de Calabaza">
+								</a>
+							</div>
+						</div>
+					</div>
+					
 
 				</div>
 			</nav>
@@ -97,6 +98,10 @@
 	</aside>
 	<main id="main" class="wrap home">
 		<section class="block-product">
+			<div id="" class="header-mbl">
+				<a href="/#products">Volver a productos</a>
+				<h2>Aceite de argán</h2>
+			</div>
 			<div class="left-40">
 				<img class="img65" src="images/03_ACEITE_argan_catalogo.png" alt="Conócenos">
 			</div>
@@ -138,9 +143,38 @@
 				</a>
 			</div>
 		</section>
-		<section class="block-contact">
-		</section>
 	</main>
+	<script>
+		function showHiddenText() {
+			var textToShow = document.getElementById("text-hidden");
+			var btn = document.getElementById("btn");
+
+			if (textToShow.classList.contains("hidden")) {
+				textToShow.classList.remove("hidden");
+				textToShow.classList.add("shown");
+				// textToShow.style.maxHeight = "100%";
+				btn.classList.remove("text-show-hidden");
+				btn.classList.add("text-hide-shown");
+			} else {
+				textToShow.classList.remove("shown");
+				// textToShow.style.maxHeight = "0";
+				textToShow.classList.add("hidden");
+				btn.classList.add("text-show-hidden");
+				btn.classList.remove("text-hide-shown");
+			}
+		}
+
+		function toggleMenu() {
+			var menu = document.getElementById("menu");
+			var btnMenu = document.getElementById("btn-menu");
+
+			if (menu.classList.contains("hidden")) {
+				menu.classList.remove("hidden");				
+			} else {
+				menu.classList.add("hidden");
+			}			
+		}
+	</script>
 </body>
 
 </html>

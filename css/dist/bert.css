@@ -159,7 +159,6 @@ body #main {
   position: relative;
 }
 body section {
-  height: calc(100% - 100px);
   overflow: hidden;
   position: relative;
   border-bottom: 1px groove white;
@@ -308,15 +307,23 @@ body section.block-products .left-70 {
 body section.block-products .right-30 {
   text-align: center;
   width: 100%;
-  height: initial;
-  position: absolute;
-  display: block;
-  bottom: 80px;
 }
 @media only screen and (min-width: 1024px) {
   body section.block-products .right-30 {
+    height: initial;
+    position: absolute;
+    display: block;
+    bottom: 80px;
     width: 30%;
     right: 0;
+  }
+}
+@media only screen and (max-width: 1365px) {
+  body section.block-products .right-30 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
   }
 }
 body section.block-products .right-30 a::after {
@@ -486,27 +493,73 @@ body section.block-contact textarea {
   padding: 10px;
 }
 body section.block-product {
-  top: 100px;
+  margin-top: 110px;
+}
+@media only screen and (max-width: 1365px) {
+  body section.block-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-product {
+    margin-top: 100px;
+  }
+}
+body section.block-product .header-mbl a::before {
+  content: "< ";
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-product .header-mbl {
+    display: none;
+  }
+}
+body section.block-product .header-mbl h2 {
+  margin-top: 15px;
 }
 body section.block-product .left-40 {
-  width: 40%;
-  float: left;
-  padding-left: 90px;
+  width: 70%;
+  overflow: hidden;
 }
-body section.block-product .left-40 .img65 {
-  width: 65%;
-  margin: 90px auto;
+@media only screen and (min-width: 1024px) {
+  body section.block-product .left-40 {
+    width: 40%;
+    float: left;
+    padding-left: 90px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-product .left-40 .img65 {
+    width: 65%;
+    margin: 90px auto;
+  }
 }
 body section.block-product .right-60 {
-  float: left;
-  width: 60%;
-  height: 100%;
-  padding: 50px 50px 0 0;
-  position: relative;
+  padding: 0 30px;
+}
+@media only screen and (max-width: 1365px) {
+  body section.block-product .right-60 {
+    margin-top: -180px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-product .right-60 {
+    float: left;
+    width: 60%;
+    height: 100%;
+    padding: 50px 50px 0 0;
+    position: relative;
+  }
 }
 body section.block-product .right-60 .link.back a {
   font-size: 1em;
   font-weight: 300;
+}
+@media only screen and (max-width: 1365px) {
+  body section.block-product .right-60 .link.back a {
+    display: none;
+  }
 }
 body section.block-product .right-60 .link.back a::before {
   content: "< ";
@@ -519,25 +572,43 @@ body section.block-product .right-60 .text.title h2 {
   font-size: 45px;
   margin-bottom: 22px;
 }
+@media only screen and (max-width: 1365px) {
+  body section.block-product .right-60 .text.title h2 {
+    display: none;
+  }
+}
 body section.block-product .right-60 .text.title .text.subtitle {
   font-size: 22px;
 }
 body section.block-product .cols-2 {
-  overflow: hidden;
   position: relative;
 }
-body section.block-product .cols-2 .col-left {
-  width: 50%;
-  float: left;
-  padding-right: 15px;
+@media only screen and (min-width: 1024px) {
+  body section.block-product .cols-2 {
+    overflow: hidden;
+  }
 }
-body section.block-product .cols-2 .col-right {
-  width: 50%;
-  float: left;
-  padding-left: 15px;
-  height: 270px;
-  overflow: hidden;
-  position: relative;
+@media only screen and (min-width: 1024px) {
+  body section.block-product .cols-2 .col-left {
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 1365px) {
+  body section.block-product .cols-2 .col-right {
+    margin-bottom: 130px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-product .cols-2 .col-right {
+    width: 50%;
+    float: left;
+    padding-left: 15px;
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+  }
 }
 body section.block-product .cols-2 .col-right a {
   bottom: 0;
@@ -555,10 +626,19 @@ body section.block-product .cols-2 a {
   bottom: 0;
 }
 body section.block-product .bottom {
-  bottom: 0;
   position: absolute;
+  bottom: 0;
   width: 100%;
-  padding-right: 50px;
+}
+@media only screen and (max-width: 1365px) {
+  body section.block-product .bottom {
+    margin: 0 -30px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-product .bottom {
+    padding-right: 50px;
+  }
 }
 body section.block-product .block-compra {
   display: table;
@@ -694,15 +774,15 @@ body .page-header .lang-container a.lang {
 }
 body h2 {
   font-size: 45px;
-  font-family: 'Sumana';
   font-weight: 300;
   line-height: 1;
-  width: 75%;
   margin: 0;
   position: relative;
 }
 @media only screen and (min-width: 1024px) {
   body h2 {
+    font-family: 'Sumana';
+    width: 75%;
     font-size: 75px;
   }
 }
