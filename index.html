@@ -86,7 +86,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 
 				</div>
 			</nav>
@@ -107,7 +107,7 @@
 				<div id="title" class="text title">
 					<h2>Comer bien para vivir mejor</h2>
 				</div>
-				<div id="text-hidden" class="text hidden">
+				<div id="text-hidden" class="text text-hidden op0">
 					<p>Naturally Healthy Bcn es fabricante de <span>productos de alimentación vegetal de alta
 							calidad</span> que contribuyen a mejorar nuestra salud de forma natural.</p>
 					<p>Nuestra filosofía se basa en aportar valor a la calidad de vida de las personas promoviendo una
@@ -118,7 +118,7 @@
 						fabricación de prensado en frío permite conservar todas las propiedades del aceite para
 						maximizar sus beneficios y reforzar nuestro organismo.</p>
 				</div>
-				<div id="btn" class="text-show-hidden" onclick="showHiddenText()">
+				<div id="btn" class="text-show-hidden" style="z-index: 1;">
 					<p>
 						Conócenos
 					</p>
@@ -208,34 +208,61 @@
 	</main>
 
 	<script>
-		function showHiddenText() {
-			var textToShow = document.getElementById("text-hidden");
-			var btn = document.getElementById("btn");
+		var textToShow = document.getElementById("text-hidden");
+		var btn = document.getElementById("btn");
 
-			if (textToShow.classList.contains("hidden")) {
-				textToShow.classList.remove("hidden");
-				textToShow.classList.add("shown");
-				// textToShow.style.maxHeight = "100%";
-				btn.classList.remove("text-show-hidden");
+		btn.addEventListener('click', function () {
+			if (textToShow.classList.contains("op0")) {
+				textToShow.classList.remove("op0");
 				btn.classList.add("text-hide-shown");
+				// setTimeout(function () {
+				// 	textToShow.classList.remove('visuallyhidden');
+				// }, 20);
 			} else {
-				textToShow.classList.remove("shown");
-				// textToShow.style.maxHeight = "0";
-				textToShow.classList.add("hidden");
-				btn.classList.add("text-show-hidden");
+				textToShow.classList.add('op0');
 				btn.classList.remove("text-hide-shown");
+				// textToShow.addEventListener('transitionend', function (e) {
+				// 	textToShow.classList.add('hidden');
+				// }, {
+				// 	capture: false,
+				// 	once: true,
+				// 	passive: false
+				// });
 			}
-		}
+
+		}, false);
+
+		function showHiddenText() {			
+		};
+
+		// if (textToShow.classList.contains("hidden")) {
+		// 	textToShow.classList.remove("hidden");
+		// 	textToShow.classList.add("shown");
+		// 	// textToShow.style.maxHeight = "100%";
+		// 	btn.classList.remove("text-show-hidden");
+		// 	btn.classList.add("text-hide-shown");
+		// } else {
+		// 	textToShow.classList.remove("shown");
+		// 	// textToShow.style.maxHeight = "0";
+		// 	textToShow.classList.add("hidden");
+		// 	btn.classList.add("text-show-hidden");
+		// 	btn.classList.remove("text-hide-shown");
+		// }
+		// }
 
 		function toggleMenu() {
 			var menu = document.getElementById("menu");
 			var btnMenu = document.getElementById("btn-menu");
+			var btn = document.getElementById("btn");
 
 			if (menu.classList.contains("hidden")) {
-				menu.classList.remove("hidden");				
+				menu.classList.remove("hidden");
+				btn.style.zIndex = 0;
+
 			} else {
 				menu.classList.add("hidden");
-			}			
+				btn.style.zIndex = 1;
+			}
 		}
 	</script>
 

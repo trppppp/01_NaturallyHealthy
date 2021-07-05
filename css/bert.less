@@ -182,6 +182,13 @@ body {
             min-height: 100%;
             height: auto;
 
+            .text-hidden {
+                transition: all 1s ease-in;
+                display: block;
+                opacity: 1;
+                max-height: 100%;
+            }
+
             @media @media-ipad {}
 
             .left-70 {
@@ -519,6 +526,7 @@ body {
 
         &.block-product {
             margin-top: 110px;
+            border: none;
 
             @media @media-only-handheld {
                 display: flex;
@@ -528,6 +536,7 @@ body {
 
             @media @media-ipad {
                 margin-top: 100px;
+                height: calc(100% - 100px);
             }
 
             .header-mbl {
@@ -568,7 +577,7 @@ body {
                 padding: 0 30px;
 
                 @media @media-only-handheld {
-                    margin-top: -180px;                    
+                    margin-top: -180px;
                 }
 
                 @media @media-ipad {
@@ -627,7 +636,7 @@ body {
                 }
 
                 .col-right {
-                    @media @media-only-handheld {                        
+                    @media @media-only-handheld {
                         margin-bottom: 130px;
                     }
 
@@ -661,18 +670,19 @@ body {
                 }
             }
 
-            .bottom {                
+            .bottom {
                 position: absolute;
-                bottom: 0;                
-                width: 100%;         
+                bottom: 0;
+                width: 100%;
+                border: none;
 
                 @media @media-only-handheld {
                     margin: 0 -30px;
                 }
 
                 @media @media-ipad {
-                    padding-right: 50px;                    
-                }       
+                    padding-right: 50px;
+                }
             }
 
             .block-compra {
@@ -1022,4 +1032,9 @@ a {
 
 * {
     box-sizing: border-box;
+}
+
+.op0 {
+    opacity: 0 !important;
+    max-height: 0 !important;
 }
