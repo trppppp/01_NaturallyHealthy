@@ -43,9 +43,9 @@
 				<a id="" class="navbar-toggle" aria-label="Menu">Menu</a>
 			</div>
 			<!-- START: menu principal -->
-			<nav id="menu" class="menu hidden" role="navigation">
+			<nav id="menu" class="menu" role="navigation">
 
-				<div class="menu-container">
+				<div id="menu-container" class="menu-container op0-menu">
 					<div class="menu-top">
 						<div class="menu-title">
 							<p>Naturally Healthy</p>
@@ -209,61 +209,49 @@
 
 	<script>
 		var textToShow = document.getElementById("text-hidden");
-		var btn = document.getElementById("btn");
+		var btn = document.getElementById("btn");		
 
 		btn.addEventListener('click', function () {
 			if (textToShow.classList.contains("op0")) {
 				textToShow.classList.remove("op0");
 				btn.classList.add("text-hide-shown");
-				// setTimeout(function () {
-				// 	textToShow.classList.remove('visuallyhidden');
-				// }, 20);
 			} else {
 				textToShow.classList.add('op0');
 				btn.classList.remove("text-hide-shown");
-				// textToShow.addEventListener('transitionend', function (e) {
-				// 	textToShow.classList.add('hidden');
-				// }, {
-				// 	capture: false,
-				// 	once: true,
-				// 	passive: false
-				// });
 			}
 
 		}, false);
 
-		function showHiddenText() {			
-		};
+		var menu = document.getElementById("menu-container");
+		var btnMenu = document.getElementById("btn-menu");
 
-		// if (textToShow.classList.contains("hidden")) {
-		// 	textToShow.classList.remove("hidden");
-		// 	textToShow.classList.add("shown");
-		// 	// textToShow.style.maxHeight = "100%";
-		// 	btn.classList.remove("text-show-hidden");
-		// 	btn.classList.add("text-hide-shown");
-		// } else {
-		// 	textToShow.classList.remove("shown");
-		// 	// textToShow.style.maxHeight = "0";
-		// 	textToShow.classList.add("hidden");
-		// 	btn.classList.add("text-show-hidden");
-		// 	btn.classList.remove("text-hide-shown");
-		// }
-		// }
-
-		function toggleMenu() {
-			var menu = document.getElementById("menu");
-			var btnMenu = document.getElementById("btn-menu");
-			var btn = document.getElementById("btn");
-
-			if (menu.classList.contains("hidden")) {
-				menu.classList.remove("hidden");
+		btnMenu.addEventListener('click', function () {
+			if (menu.classList.contains("op0-menu")) {
+				menu.classList.remove("op0-menu");
+				btnMenu.classList.add("arrow-up");
 				btn.style.zIndex = 0;
-
 			} else {
-				menu.classList.add("hidden");
+				menu.classList.add('op0-menu');
+				btnMenu.classList.remove("arrow-up");
 				btn.style.zIndex = 1;
 			}
-		}
+
+		}, false);
+
+		// function toggleMenu() {
+		// 	var menu = document.getElementById("menu");
+		// 	var btnMenu = document.getElementById("btn-menu");
+		// 	var btn = document.getElementById("btn");
+
+		// 	if (menu.classList.contains("hidden")) {
+		// 		menu.classList.remove("hidden");
+		// 		btn.style.zIndex = 0;
+
+		// 	} else {
+		// 		menu.classList.add("hidden");
+		// 		btn.style.zIndex = 1;
+		// 	}
+		// }
 	</script>
 
 

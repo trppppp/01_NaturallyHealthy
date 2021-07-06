@@ -11,9 +11,11 @@ body .menu-container {
   width: 100%;
   position: absolute;
   height: calc(100vh - 76px);
+  opacity: 1;
   margin-top: 76px;
   left: 0;
   background: #2f663b;
+  transition: all 1s ease-in;
 }
 @media only screen and (min-width: 1024px) {
   body .menu-container {
@@ -178,7 +180,7 @@ body section.block-apertura .text-hidden {
   transition: all 1s ease-in;
   display: block;
   opacity: 1;
-  max-height: 100%;
+  max-height: 950px;
 }
 body section.block-apertura .left-70 {
   margin: 0;
@@ -766,6 +768,23 @@ body .page-header .btn-menu {
     width: 130px;
   }
 }
+body .page-header .btn-menu::after {
+  transition: all 1s ease-in;
+  content: '\279C';
+  margin-left: 12px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+body .page-header .btn-menu.arrow-up::after {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
 body .page-header .lang-container {
   display: none;
   left: 190px;
@@ -780,6 +799,9 @@ body .page-header .lang-container {
 }
 body .page-header .lang-container a.lang {
   border-bottom: none;
+}
+body .page-header .lang-container.btn-menu::after {
+  content: none;
 }
 body h2 {
   font-size: 45px;
@@ -955,4 +977,7 @@ a {
 .op0 {
   opacity: 0 !important;
   max-height: 0 !important;
+}
+.op0-menu {
+  opacity: 0 !important;
 }
