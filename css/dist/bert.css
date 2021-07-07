@@ -101,6 +101,11 @@ body .menu-container .element a img {
   width: 85%;
   margin: 0 auto;
 }
+@media only screen and (min-width: 768px) {
+  body .menu-container .element a img {
+    width: 60%;
+  }
+}
 @media only screen and (min-width: 1024px) {
   body .menu-container .element a img {
     width: 75%;
@@ -117,6 +122,8 @@ body .menu-container .menu-title {
   position: relative;
   bottom: 0;
   left: 0;
+  color: #cfdecc;
+  font-weight: 200;
 }
 @media only screen and (max-width: 1023px) {
   body .menu-container .menu-title {
@@ -385,6 +392,19 @@ body section.block-catalog .element .block-title p {
     font-size: 18px;
   }
 }
+body section.block-catalog .element .block-subtitle {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 1px;
+  padding-bottom: 2%;
+  position: absolute;
+  margin: 20px auto;
+  width: 100%;
+  display: block;
+  bottom: 0;
+}
 body section.block-catalog .element .img60 {
   width: 60%;
   margin: 0 auto;
@@ -415,6 +435,7 @@ body section.block-contact form {
 @media only screen and (min-width: 1024px) {
   body section.block-contact form {
     padding-left: 150px;
+    min-height: 100vh;
   }
 }
 body section.block-contact .contact-left {
@@ -432,9 +453,7 @@ body section.block-contact .contact-left {
 }
 body section.block-contact input {
   background: none;
-  color: #ccc9c9;
   font-family: 'Roboto';
-  font-size: 22px;
   line-height: 25px;
   border: none;
   border-bottom-width: 1px;
@@ -442,6 +461,14 @@ body section.block-contact input {
   border-bottom-style: solid;
   margin-bottom: 40px;
   letter-spacing: 1px;
+  color: #cfdecc;
+  font-weight: 300;
+  font-size: 18px;
+}
+body section.block-contact input::placeholder {
+  color: #cfdecc;
+  font-weight: 200;
+  font-size: 18px;
 }
 body section.block-contact input[type="submit"] {
   background: white;
@@ -458,6 +485,16 @@ body section.block-contact input[type="submit"] {
   margin: 0;
   font-weight: 300;
   float: right;
+}
+body section.block-contact textarea {
+  color: #cfdecc;
+  font-weight: 200;
+  font-size: 18px;
+}
+body section.block-contact textarea::placeholder {
+  color: #cfdecc;
+  font-weight: 300;
+  font-size: 18px;
 }
 body section.block-contact h2 {
   margin: 30px 0 25px;
@@ -514,7 +551,8 @@ body section.block-product {
 @media only screen and (min-width: 1024px) {
   body section.block-product {
     margin-top: 100px;
-    height: calc(100% - 100px);
+    height: 100%;
+    position: relative;
   }
 }
 body section.block-product .header-mbl a::before {
@@ -537,6 +575,7 @@ body section.block-product .left-40 {
     width: 40%;
     float: left;
     padding-left: 90px;
+    height: calc(100vh - 100px);
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -560,6 +599,11 @@ body section.block-product .right-60 {
     height: 100%;
     padding: 50px 50px 0 0;
     position: relative;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body section.block-product .right-60 .link.back {
+    margin-bottom: 20px;
   }
 }
 body section.block-product .right-60 .link.back a {
@@ -587,8 +631,26 @@ body section.block-product .right-60 .text.title h2 {
     display: none;
   }
 }
+@media only screen and (min-width: 1024px) {
+  body section.block-product .right-60 .text.title h2 {
+    font-size: 35px;
+    margin-bottom: 28px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  body section.block-product .right-60 .text.title h2 {
+    font-size: 45px;
+    margin-bottom: 22px;
+  }
+}
 body section.block-product .right-60 .text.title .text.subtitle {
   font-size: 22px;
+}
+@media only screen and (min-width: 1024px) {
+  body section.block-product .right-60 .text.title .text.subtitle {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
 }
 body section.block-product .cols-2 {
   position: relative;
@@ -648,7 +710,9 @@ body section.block-product .bottom {
 }
 @media only screen and (min-width: 1024px) {
   body section.block-product .bottom {
+    position: fixed;
     padding-right: 50px;
+    width: 700px;
   }
 }
 body section.block-product .block-compra {
@@ -930,13 +994,18 @@ a:hover {
 }
 @media only screen and (min-width: 1024px) {
   .text-show-hidden {
-    top: 0;
+    margin-top: 50px;
   }
 }
 .text-show-hidden p {
   border-bottom: 1px solid white;
   line-height: 30px;
   width: fit-content;
+}
+@media only screen and (min-width: 1024px) {
+  .text-show-hidden.text-hide-shown {
+    margin-top: 0px;
+  }
 }
 .text-show-hidden p::after {
   content: "+";

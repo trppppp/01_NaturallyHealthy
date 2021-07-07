@@ -109,6 +109,10 @@ body {
                     width: 85%;
                     margin: 0 auto;
 
+                    @media @media-tablet {
+                        width: 60%;
+                    }
+
                     @media @media-ipad {
                         width: 75%;
                     }
@@ -126,6 +130,8 @@ body {
             position: relative;
             bottom: 0;
             left: 0;
+            color: @color-light-green;
+            font-weight: 200;
 
             @media @media-only-handheld {
                 display: flex;
@@ -400,6 +406,20 @@ body {
                     }
                 }
 
+                .block-subtitle {
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 300;
+                    line-height: 1;
+                    letter-spacing: 1px;
+                    padding-bottom: 2%;
+                    position: absolute;
+                    margin: 20px auto;
+                    width: 100%;
+                    display: block;
+                    bottom: 0;
+                }
+
                 .img60 {
                     width: 60%;
                     margin: 0 auto;
@@ -436,6 +456,7 @@ body {
 
                 @media @media-ipad {
                     padding-left: 150px;
+                    min-height: 100vh;
                 }
             }
 
@@ -454,9 +475,7 @@ body {
 
             input {
                 background: none;
-                color: #ccc9c9;
                 font-family: 'Roboto';
-                font-size: 22px;
                 line-height: 25px;
                 border: none;
                 border-bottom-width: 1px;
@@ -464,6 +483,15 @@ body {
                 border-bottom-style: solid;
                 margin-bottom: 40px;
                 letter-spacing: 1px;
+                color: @color-light-green;
+                font-weight: 300;
+                font-size: 18px;
+
+                &::placeholder {
+                    color: @color-light-green;
+                    font-weight: 200;
+                    font-size: 18px;
+                }
             }
 
             input[type="submit"] {
@@ -481,6 +509,18 @@ body {
                 margin: 0;
                 font-weight: 300;
                 float: right;
+            }
+
+            textarea {
+                &::placeholder {
+                    color: @color-light-green;
+                    font-weight: 300;
+                    font-size: 18px;
+                }
+
+                color: @color-light-green;
+                font-weight: 200;
+                font-size: 18px;
             }
 
             h2 {
@@ -538,7 +578,9 @@ body {
 
             @media @media-ipad {
                 margin-top: 100px;
-                height: calc(100% - 100px);
+                // height: calc(100vh - 100px);
+                height: 100%;
+                position: relative;
             }
 
             .header-mbl {
@@ -565,6 +607,7 @@ body {
                     width: 40%;
                     float: left;
                     padding-left: 90px;
+                    height: calc(100vh - 100px);
                 }
 
                 .img65 {
@@ -588,18 +631,23 @@ body {
                     height: 100%;
                     padding: 50px 50px 0 0;
                     position: relative;
-                }
+                }                
 
-                .link.back a {
-                    font-size: 1em;
-                    font-weight: 300;
-
-                    @media @media-only-handheld {
-                        display: none;
+                .link.back {
+                    @media @media-tablet {
+                        margin-bottom: 20px;
                     }
+                    a {
+                        font-size: 1em;
+                        font-weight: 300;
 
-                    &::before {
-                        content: "< ";
+                        @media @media-only-handheld {
+                            display: none;
+                        }
+
+                        &::before {
+                            content: "< ";
+                        }
                     }
                 }
 
@@ -607,17 +655,33 @@ body {
                     margin-bottom: 30px;
 
                     h2 {
+                        font-weight: 300;
+                        font-size: 45px;
+                        margin-bottom: 22px;
+
                         @media @media-only-handheld {
                             display: none;
                         }
 
-                        font-weight: 300;
-                        font-size: 45px;
-                        margin-bottom: 22px;
+                        @media @media-ipad {
+                            font-size: 35px;
+                            margin-bottom: 28px;
+                        }
+
+                        @media @media-laptop {
+                            font-size: 45px;
+                            margin-bottom: 22px;
+                        }
+                        
                     }
 
                     .text.subtitle {
                         font-size: 22px;
+
+                        @media @media-ipad {
+                            font-size: 18px;
+                            margin-bottom: 28px;
+                        }
                     }
                 }
             }
@@ -683,7 +747,9 @@ body {
                 }
 
                 @media @media-ipad {
+                    position: fixed;
                     padding-right: 50px;
+                    width: 700px;
                 }
             }
 
@@ -801,7 +867,7 @@ body {
             position: absolute;
             display: flex;
             align-items: center;
-            justify-content: center;            
+            justify-content: center;
 
             @media @media-ipad {
                 width: 130px;
@@ -819,7 +885,7 @@ body {
             }
 
             &.arrow-up {
-            
+
                 &::after {
                     -webkit-transform: rotate(-90deg);
                     -moz-transform: rotate(-90deg);
@@ -1004,7 +1070,7 @@ a:hover {
     letter-spacing: 1px;
 
     @media @media-ipad {
-        top: 0;
+        margin-top: 50px;
     }
 
     @media @media-hd {}
@@ -1013,6 +1079,12 @@ a:hover {
         border-bottom: 1px solid white;
         line-height: 30px;
         width: fit-content;
+    }
+
+    &.text-hide-shown {
+        @media @media-ipad {
+            margin-top: 0px;
+        }
     }
 }
 
@@ -1065,5 +1137,5 @@ a {
 }
 
 .op0-menu {
-    opacity: 0 !important;    
+    opacity: 0 !important;
 }
