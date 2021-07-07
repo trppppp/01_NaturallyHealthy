@@ -118,7 +118,7 @@ body .menu-container .menu-title {
   bottom: 0;
   left: 0;
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (max-width: 1023px) {
   body .menu-container .menu-title {
     display: flex;
     align-content: center;
@@ -326,7 +326,7 @@ body section.block-products .right-30 {
     right: 0;
   }
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (max-width: 1023px) {
   body section.block-products .right-30 div {
     display: flex;
     justify-content: center;
@@ -504,7 +504,7 @@ body section.block-product {
   margin-top: 110px;
   border: none;
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (max-width: 1023px) {
   body section.block-product {
     display: flex;
     flex-direction: column;
@@ -548,7 +548,7 @@ body section.block-product .left-40 {
 body section.block-product .right-60 {
   padding: 0 30px;
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (max-width: 1023px) {
   body section.block-product .right-60 {
     margin-top: -180px;
   }
@@ -566,7 +566,7 @@ body section.block-product .right-60 .link.back a {
   font-size: 1em;
   font-weight: 300;
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (max-width: 1023px) {
   body section.block-product .right-60 .link.back a {
     display: none;
   }
@@ -582,7 +582,7 @@ body section.block-product .right-60 .text.title h2 {
   font-size: 45px;
   margin-bottom: 22px;
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (max-width: 1023px) {
   body section.block-product .right-60 .text.title h2 {
     display: none;
   }
@@ -605,7 +605,7 @@ body section.block-product .cols-2 {
     padding-right: 15px;
   }
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (max-width: 1023px) {
   body section.block-product .cols-2 .col-right {
     margin-bottom: 130px;
   }
@@ -641,7 +641,7 @@ body section.block-product .bottom {
   width: 100%;
   border: none;
 }
-@media only screen and (max-width: 1365px) {
+@media only screen and (max-width: 1023px) {
   body section.block-product .bottom {
     margin: 0 -30px;
   }
