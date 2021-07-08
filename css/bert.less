@@ -25,9 +25,7 @@ body {
             height: calc(100vh - 100px);
             margin-top: 100px;
             left: 100px;
-            max-height: 100vh;
-            min-height: 636px;
-            overflow: scroll;
+            max-height: 100vh;            
         }
 
         .menu-top {
@@ -99,8 +97,6 @@ body {
             @media @media-ipad {
                 padding-bottom: 0;
             }
-
-
 
             a {
                 background-color: @color-dark-green;
@@ -232,7 +228,7 @@ body {
                     width: 35%;
                     top: -370px;
                     right: 0;
-                }
+                }                
             }
 
             p {
@@ -244,6 +240,10 @@ body {
                     font-size: 18px;
                     line-height: 23px;
                     letter-spacing: 1px;
+                }
+
+                @media @media-laptop {                    
+                    font-size: 22px;                    
                 }
 
                 &:first-child {
@@ -276,6 +276,12 @@ body {
                     left: -185px;
                     position: relative;
                 }
+
+                @media @media-laptop {
+                    width: 140%;
+                    left: -185px;
+                    position: relative;
+                }
             }
 
             h2 {
@@ -292,6 +298,15 @@ body {
         }
 
         &.block-products {
+            @media @media-ipad {
+                height: calc(100vh);
+            }
+
+            @media @media-desktop {
+                height: calc(100vh - 150px);
+            }
+
+
             .left-70 {
                 margin: 0;
                 padding: 0px;
@@ -308,13 +323,12 @@ body {
                     padding-left: 150px;
                     display: block;
                     margin-top: 0;
+                    justify-content: center;
+                    align-items: center;
                 }
 
                 @media @media-laptop {
-                    width: 60%;
-                    display: flex;
-                    align-content: center;
-                    justify-content: center;
+                    // width: 100%;                                        
                 }
 
                 @media @media-hd {
@@ -355,8 +369,25 @@ body {
                     }
                 }
 
+                a {
+
+                    @media @media-ipad {
+                        font-size: 20px;
+                    }
+                
+                    @media @media-laptop {
+                        font-size: 25px;
+                    }
+
+                    @media @media-desktop {
+                        font-size: 30px;
+                    }
+                }
+                
+
                 a::after {
-                    content: " -->";
+                    content: "\279D";
+                    margin-left: 5px;
                 }
 
             }
@@ -379,13 +410,18 @@ body {
                 flex-direction: column;
                 justify-content: flex-end;
                 margin: 10px 0;
-                max-height: calc(100vh - 140px);
+                max-height: calc(100vh - 140px);                ;
                 position: relative;
                 overflow: hidden;
 
                 @media @media-ipad {
                     width: 25%;
                     margin: 0 2%;
+                    height: 420px
+                }
+
+                @media @media-desktop {                    
+                    height: 675px
                 }
 
                 .block-title {
@@ -421,6 +457,7 @@ body {
                     width: 100%;
                     display: block;
                     bottom: 0;
+                    display: none;
                 }
 
                 .img60 {
@@ -447,11 +484,14 @@ body {
             @media @media-ipad {
                 height: calc(100% - 100px);
                 max-width: 95%;
-                overflow: scroll;
+                overflow-y: scroll;
             }
 
             @media @media-hd {}
 
+            &::-webkit-scrollbar {
+                display: none;
+            }
 
             form {
 
@@ -880,7 +920,7 @@ body {
 
             &::after {
                 transition: all 1s ease-in;
-                content: '\279C';
+                content: '\279D';
                 margin-left: 12px;
                 -webkit-transform: rotate(90deg);
                 -moz-transform: rotate(90deg);
