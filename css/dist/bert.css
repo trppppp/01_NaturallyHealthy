@@ -22,6 +22,9 @@ body .menu-container {
     height: calc(100vh - 100px);
     margin-top: 100px;
     left: 100px;
+    max-height: 100vh;
+    min-height: 636px;
+    overflow: scroll;
   }
 }
 body .menu-container .menu-top {
@@ -426,6 +429,7 @@ body section.block-contact {
   body section.block-contact {
     height: calc(100% - 100px);
     max-width: 95%;
+    overflow: scroll;
   }
 }
 body section.block-contact form {
@@ -1049,4 +1053,5 @@ a {
 }
 .op0-menu {
   opacity: 0 !important;
+  max-height: 0 !important;
 }
