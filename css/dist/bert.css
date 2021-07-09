@@ -7,6 +7,15 @@ body {
   padding: 0;
   height: 100vh;
 }
+body.es #lang-es {
+  border-bottom: 1px solid white;
+}
+body.en #lang-en {
+  border-bottom: 1px solid white;
+}
+body.fr #lang-fr {
+  border-bottom: 1px solid white;
+}
 body .menu-container {
   width: 100%;
   position: absolute;
@@ -20,7 +29,7 @@ body .menu-container {
 @media only screen and (min-width: 1024px) {
   body .menu-container {
     height: calc(100vh - 100px);
-    margin-top: 100px;
+    margin-top: 99px;
     left: 100px;
     max-height: 100vh;
   }
@@ -291,14 +300,25 @@ body section.block-apertura img {
     margin-top: 160px;
   }
 }
+@media only screen and (min-width: 768px) {
+  body section.block-products {
+    height: 450px;
+  }
+}
 @media only screen and (min-width: 1024px) {
   body section.block-products {
-    height: calc(100vh);
+    height: 550px;
   }
 }
 @media only screen and (min-width: 1680px) {
   body section.block-products {
     height: calc(100vh - 150px);
+  }
+}
+@media only screen and (min-width: 768px) {
+  body section.block-products .img-container {
+    width: 70%;
+    margin: auto;
   }
 }
 body section.block-products .left-70 {
@@ -315,7 +335,6 @@ body section.block-products .left-70 {
     width: 70%;
     height: 100%;
     padding-left: 150px;
-    display: block;
     margin-top: 0;
     justify-content: center;
     align-items: center;
@@ -334,7 +353,6 @@ body section.block-products .left-70 {
 }
 @media only screen and (min-width: 1920px) {
   body section.block-products .left-70 img {
-    width: 70%;
     margin: auto;
   }
 }
@@ -347,9 +365,14 @@ body section.block-products .right-30 {
     height: initial;
     position: absolute;
     display: block;
-    bottom: 80px;
+    bottom: 135px;
     width: 30%;
     right: 0;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  body section.block-products .right-30 {
+    bottom: 205px;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -363,6 +386,8 @@ body section.block-products .right-30 {
 @media only screen and (min-width: 1024px) {
   body section.block-products .right-30 a {
     font-size: 20px;
+    left: 0;
+    position: absolute;
   }
 }
 @media only screen and (min-width: 1366px) {
@@ -804,6 +829,9 @@ body .page-header {
   left: 0;
   z-index: 1;
 }
+body .page-header.active {
+  background: #2f663b;
+}
 body .page-header .header-content {
   height: 77px;
   max-height: 77px;
@@ -1096,4 +1124,7 @@ a {
 .op0-menu {
   opacity: 0 !important;
   max-height: 0 !important;
+}
+.op0-menu ul {
+  display: none !important;
 }

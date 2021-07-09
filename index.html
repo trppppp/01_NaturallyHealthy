@@ -21,9 +21,9 @@
 	<!-- <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script> -->
 </head>
 
-<body>
+<body class="es">
 	<header id="header" class="page-header">
-		<div class="header-content">
+		<div id="menu-var" class="header-content">
 			<!-- START: Titulo principal en portada -->
 			<h1 class="page-title">Naturally Healthy</h1>
 			<!-- END: Titulo principal en portada -->
@@ -131,7 +131,9 @@
 		<section class="block-products bg-dark-green">
 			<div id="products"></div>
 			<div class="left-70">
-				<img src="images/02_Productos.png" alt="Productos">
+				<div class="img-container">
+					<img src="images/02_Productos.png" alt="Productos">
+				</div>
 			</div>
 			<div class="right-30">
 				<div id="" class="">
@@ -236,15 +238,18 @@
 
 		var menu = document.getElementById("menu-container");
 		var btnMenu = document.getElementById("btn-menu");
+		var menuVar = document.getElementById("header");
 
 		btnMenu.addEventListener('click', function () {
 			if (menu.classList.contains("op0-menu")) {
 				menu.classList.remove("op0-menu");
 				btnMenu.classList.add("arrow-up");
+				menuVar.classList.add("active");
 				btn.style.zIndex = 0;
 			} else {
 				menu.classList.add('op0-menu');
 				btnMenu.classList.remove("arrow-up");
+				menuVar.classList.remove("active");
 				btn.style.zIndex = 1;
 			}
 

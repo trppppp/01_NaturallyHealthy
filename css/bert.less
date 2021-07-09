@@ -11,6 +11,22 @@ body {
 
     @media @media-ipad {}
 
+    &.es {
+        #lang-es {
+            border-bottom: 1px solid white;
+        }
+    }
+    &.en {
+        #lang-en {
+            border-bottom: 1px solid white;
+        }
+    }
+    &.fr {
+        #lang-fr {
+            border-bottom: 1px solid white;
+        }
+    }
+
     .menu-container {
         width: 100%;
         position: absolute;
@@ -23,9 +39,9 @@ body {
 
         @media @media-ipad {
             height: calc(100vh - 100px);
-            margin-top: 100px;
+            margin-top: 99px;
             left: 100px;
-            max-height: 100vh;            
+            max-height: 100vh;
         }
 
         .menu-top {
@@ -228,7 +244,7 @@ body {
                     width: 35%;
                     top: -370px;
                     right: 0;
-                }                
+                }
             }
 
             p {
@@ -242,8 +258,8 @@ body {
                     letter-spacing: 1px;
                 }
 
-                @media @media-laptop {                    
-                    font-size: 22px;                    
+                @media @media-laptop {
+                    font-size: 22px;
                 }
 
                 &:first-child {
@@ -298,14 +314,25 @@ body {
         }
 
         &.block-products {
+            @media @media-tablet {
+                height: 450px;
+            }
+
             @media @media-ipad {
-                height: calc(100vh);
+                height: 550px;
             }
 
             @media @media-desktop {
                 height: calc(100vh - 150px);
             }
 
+            .img-container {
+
+                @media @media-tablet {
+                    width: 70%;
+                    margin: auto;
+                }
+            }
 
             .left-70 {
                 margin: 0;
@@ -321,7 +348,6 @@ body {
                     width: 70%;
                     height: 100%;
                     padding-left: 150px;
-                    display: block;
                     margin-top: 0;
                     justify-content: center;
                     align-items: center;
@@ -340,8 +366,7 @@ body {
                 }
 
                 img {
-                    @media @media-hd {
-                        width: 70%;
+                    @media @media-hd {                        
                         margin: auto;
                     }
                 }
@@ -355,9 +380,13 @@ body {
                     height: initial;
                     position: absolute;
                     display: block;
-                    bottom: 80px;
+                    bottom: 135px;
                     width: 30%;
                     right: 0;
+                }
+
+                @media @media-laptop {
+                    bottom: 205px;
                 }
 
                 div {
@@ -373,8 +402,10 @@ body {
 
                     @media @media-ipad {
                         font-size: 20px;
+                        left: 0;
+                        position: absolute;
                     }
-                
+
                     @media @media-laptop {
                         font-size: 25px;
                     }
@@ -383,7 +414,7 @@ body {
                         font-size: 30px;
                     }
                 }
-                
+
 
                 a::after {
                     content: "\279D";
@@ -410,7 +441,8 @@ body {
                 flex-direction: column;
                 justify-content: flex-end;
                 margin: 10px 0;
-                max-height: calc(100vh - 140px);                ;
+                max-height: calc(100vh - 140px);
+                ;
                 position: relative;
                 overflow: hidden;
 
@@ -420,7 +452,7 @@ body {
                     height: 420px
                 }
 
-                @media @media-desktop {                    
+                @media @media-desktop {
                     height: 675px
                 }
 
@@ -849,6 +881,10 @@ body {
         left: 0;
         z-index: 1;
 
+        &.active {
+            background: @color-green;
+        }
+
         .header-content {
             height: @s-menu-m;
             max-height: @s-menu-m;
@@ -1184,4 +1220,8 @@ a {
 .op0-menu {
     opacity: 0 !important;
     max-height: 0 !important;
+
+    ul {
+        display: none !important;
+    }
 }
