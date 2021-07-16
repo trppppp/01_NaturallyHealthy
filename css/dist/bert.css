@@ -793,10 +793,15 @@ body section.block-product .block-compra {
   display: table;
   position: relative;
   bottom: 0;
-  height: 135px;
+  height: 75px;
   width: 100%;
   align-content: center;
   font-size: 27px;
+}
+@media only screen and (min-width: 1366px) {
+  body section.block-product .block-compra {
+    height: 125px;
+  }
 }
 body section.block-product .block-compra div {
   text-align: center;
@@ -816,9 +821,10 @@ body section.block-product .block-compra .cost {
 }
 body section.block-product .block-compra .cost .basket-img {
   background: url(../../images/99_basket.svg);
+  background-repeat: no-repeat;
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border: none;
 }
 body section.block-product .block-compra .link-amazon {
