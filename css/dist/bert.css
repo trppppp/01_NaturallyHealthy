@@ -201,7 +201,6 @@ body section.block-apertura .text-hidden {
   display: block;
   opacity: 1;
   max-height: 950px;
-  z-index: 1;
 }
 body section.block-apertura .left-70 {
   margin: 0;
@@ -226,6 +225,7 @@ body section.block-apertura .right-30 {
   float: left;
   position: absolute;
   top: 0;
+  z-index: -1;
 }
 @media only screen and (min-width: 1024px) {
   body section.block-apertura .right-30 {
