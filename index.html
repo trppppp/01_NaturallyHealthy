@@ -16,8 +16,10 @@
 		rel="stylesheet">
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="css/dist/bert.css">
+	<link rel="stylesheet" type="text/css" href="css/dist/bert-dist.css">
 	<!-- <link rel="stylesheet/less" type="text/css" href="css/bert.less"> -->
+	<!-- JS -->
+	<link rel="script" href="scripts/bert-dist.js>
 	<!-- <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script> -->
 </head>
 
@@ -30,7 +32,7 @@
 			<!-- START: link logotipo -->
 			<div class="brand">
 				<a href="/" title="Naturally Healthy">
-					<img src="images/00_header-logo.png" alt="Naturally Healthy">
+					<!-- <img src="images/00_header-logo-16.png" alt="Naturally Healthy"> -->
 				</a>
 			</div>
 			<!-- END: link logotipo -->
@@ -48,38 +50,38 @@
 				<div id="menu-container" class="menu-container op0-menu">
 					<div class="menu-top">
 						<div class="menu-title">
-							<p>Naturally Healthy</p>
+							<a class="xs-hidden" href="/#meetus">Naturally Healthy</a>
 						</div>
 						<ul class="">
-							<li><a href="/#block-apertura" title="Conócenos">Conócenos</a></li>
-							<li class=""><a href="/#productos">Productos</a></li>
-							<li class=""><a href="/#Contacto">Contacto</a></li>
+							<li id="btn-menu-m"><a href="/#meetus" title="Conócenos">Conócenos</a></li>
+							<li id="btn-menu-p"><a href="/#products" title="Productos">Productos</a></li>
+							<li id="btn-menu-c"><a href="/#contact" title="Contacto">Contacto</a></li>
 						</ul>
 					</div>
 					<div class="menu-down">
 						<div class="menu-title">
-							<p class="xs-hidden">Nuestros Productos</p>
+							<a class="xs-hidden" href="/#catalog">Nuestros Productos</a>
 						</div>
 						<div class="products-container xs-hidden">
 							<div class="element">
-								<a href="/argan.html">
+								<a href="/es/argan.html">
 									<img class="img60" src="images/03_ACEITE_argan_catalogo.png" alt="Aceite de Argán">
 								</a>
 							</div>
 							<div class="element">
-								<a href="/almendra.html">
+								<a href="/es/almendra.html">
 									<img class="img60" src="images/03_ACEITE_almendra_catalogo.png"
 										alt="Aceite de Almendra">
 								</a>
 							</div>
 							<div class="element">
-								<a href="/aguacate.html">
+								<a href="/es/aguacate.html">
 									<img class="img60" src="images/03_ACEITE_aguacate_catalogo.png"
 										alt="Aceite de Aguacate">
 								</a>
 							</div>
 							<div class="element">
-								<a href="/calabaza.html">
+								<a href="/es/calabaza.html">
 									<img class="img60" src="images/03_ACEITE_calabaza_catalogo.png"
 										alt="Aceite de Calabaza">
 								</a>
@@ -95,14 +97,15 @@
 	</header>
 	<aside class="aside">
 		<div class="aside-v aside-f">
-			<a id="catalog" class="navbar-links" aria-label="navbar-link">Compra en Amazon</a>
+			<a class="navbar-links" aria-label="navbar-link">Compra en Amazon</a>
 		</div>
 		<div class="aside-v aside-s">
-			<a id="catalog" class="navbar-links" aria-label="navbar-link">Descargar Catálogo</a>
+			<a  class="navbar-links" aria-label="navbar-link">Descargar Catálogo</a>
 		</div>
 	</aside>
-	<main id="main" class="wrap home">
+	<main id="main" class="wrap home">		
 		<section class="block-apertura">
+			<div id="meetus"></div>
 			<div class="left-70">
 				<div id="title" class="text title">
 					<h2>Comer bien para vivir mejor</h2>
@@ -128,7 +131,7 @@
 				<img src="images/03_ACEITE_argan_catalogo.png" alt="Conócenos">
 			</div>
 		</section>
-		<section class="block-products bg-dark-green">
+		<section class="block-products bg-dark-green">						
 			<div id="products"></div>
 			<div class="left-70">
 				<div class="img-container">
@@ -137,13 +140,14 @@
 			</div>
 			<div class="right-30">
 				<div id="" class="">
-					<a class="" href="productos.html">Nuestros Productos</a>
+					<a class="" href="/#catalog">Nuestros Productos</a>
 				</div>
 			</div>
 		</section>
-		<section class="block-catalog">
+		<section class="block-catalog">	
+			<div id="products"></div>
 			<div class="element bg-dark-green">
-				<a href="/argan.html">
+				<a href="/es/argan.html">
 					<div class="block-title">
 						<p>Aceite de Argán</p>
 					</div>
@@ -154,7 +158,8 @@
 				</a>
 			</div>
 			<div class="element bg-dark-green">
-				<a href="/almendra.html">
+				<div id="catalog"></div>	
+				<a href="/es/almendra.html">
 					<div class="block-title">
 						<p>Aceite de Almendra</p>
 					</div>
@@ -165,7 +170,7 @@
 				</a>
 			</div>
 			<div class="element bg-dark-green">
-				<a href="/aguacate.html">
+				<a href="/es/aguacate.html">
 					<div class="block-title">
 						<p>Aceite de Aguacate</p>
 					</div>
@@ -176,7 +181,7 @@
 				</a>
 			</div>
 			<div class="element bg-dark-green">
-				<a href="/calabaza.html">
+				<a href="/es/calabaza.html">
 					<div class="block-title">
 						<p>Aceite de Calabaza</p>
 					</div>
@@ -188,6 +193,7 @@
 			</div>
 		</section>
 		<section class="block-contact">
+			<div id="contact"></div>
 			<form action="https://mailthis.to/example" method="POST" encType="multipart/form-data">
 				<h2>Contacta con nosotros</h2>
 				<div class="contact-left">
@@ -222,38 +228,67 @@
 	</main>
 
 	<script>
-		var textToShow = document.getElementById("text-hidden");
-		var btn = document.getElementById("btn");		
 
-		btn.addEventListener('click', function () {
-			if (textToShow.classList.contains("op0")) {
-				textToShow.classList.remove("op0");
-				btn.classList.add("text-hide-shown");
-			} else {
-				textToShow.classList.add('op0');
-				btn.classList.remove("text-hide-shown");
-			}
+		//Mostrar texto oculto
+var textToShow = document.getElementById("text-hidden");
+var btn = document.getElementById("btn");		
 
-		}, false);
+btn.addEventListener('click', function () {			
+    toggleHiddenText();
+}, false);
 
-		var menu = document.getElementById("menu-container");
-		var btnMenu = document.getElementById("btn-menu");
-		var menuVar = document.getElementById("header");
+//Menú
+var menu = document.getElementById("menu-container");
+var btnMenu = document.getElementById("btn-menu");
+var menuVar = document.getElementById("header");
+var txtHidden = document.getElementById("text-hidden");
+var menuProductos = document.getElementById("btn-menu-p");
+var menuMeetUs = document.getElementById("btn-menu-m");
+var menuContacto = document.getElementById("btn-menu-c");
 
-		btnMenu.addEventListener('click', function () {
-			if (menu.classList.contains("op0-menu")) {
-				menu.classList.remove("op0-menu");
-				btnMenu.classList.add("arrow-up");
-				menuVar.classList.add("active");
-				btn.style.zIndex = 0;
-			} else {
-				menu.classList.add('op0-menu');
-				btnMenu.classList.remove("arrow-up");
-				menuVar.classList.remove("active");
-				btn.style.zIndex = 1;
-			}
+btnMenu.addEventListener('click', function () {
+    toggleMenu();
+}, false);
 
-		}, false);
+menuProductos.addEventListener('click', function () {
+    toggleMenu();
+}, false);
+
+menuContacto.addEventListener('click', function () {
+    toggleMenu();
+}, false);
+
+menuMeetUs.addEventListener('click', function () {
+    toggleMenu();
+    toggleHiddenText();
+}, false);
+
+function toggleHiddenText() {
+    window.console.log("pasa tron");
+    if (textToShow.classList.contains("op0")) {
+        textToShow.classList.remove("op0");
+        btn.classList.add("text-hide-shown");
+    } else {
+        textToShow.classList.add('op0');
+        btn.classList.remove("text-hide-shown");
+    }
+};
+
+function toggleMenu(){
+    if (menu.classList.contains("op0-menu")) {
+        menu.classList.remove("op0-menu");
+        btnMenu.classList.add("arrow-up");
+        menuVar.classList.add("active");
+        btn.style.zIndex = 0;
+        txtHidden.style.zIndex = 0;
+    } else {
+        menu.classList.add('op0-menu');
+        btnMenu.classList.remove("arrow-up");
+        menuVar.classList.remove("active");
+        btn.style.zIndex = 1;
+        txtHidden.style.zIndex = 1;
+    }
+};
 	</script>
 
 

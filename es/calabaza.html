@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Naturally Healthy</title>
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="../../images/favicon.ico">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+		rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../../css/dist/bert.css">
+	<!-- <link rel="stylesheet/less" type="text/css" href="css/bert.less"> -->
+	<!-- <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script> -->
+</head>
+
+<body>
+	<header id="header" class="page-header">
+		<div class="header-content">
+			<!-- START: Titulo principal en portada -->
+			<h1 class="page-title">Naturally Healthy</h1>
+			<!-- END: Titulo principal en portada -->
+			<!-- START: link logotipo -->
+			<div class="brand">
+				<a href="/" title="Naturally Healthy">
+					<img src="../../images/00_header-logo.png" alt="Naturally Healthy">
+				</a>
+			</div>
+			<!-- END: link logotipo -->
+			<div id="lang" class="lang-container btn-menu">
+				<a id="lang-es" class="lang" aria-label="Menu">ES</a>
+				<a id="lang-en" class="lang" aria-label="Menu">EN</a>
+				<a id="lang-fr" class="lang" aria-label="Menu">FR</a>
+			</div>
+			<div id="btn-menu" class="btn-menu" onclick="toggleMenu()">
+				<a id="" class="navbar-toggle" aria-label="Menu">Menu</a>
+			</div>
+			<!-- START: menu principal -->
+			<nav id="menu" class="menu hidden" role="navigation">
+
+				<div class="menu-container">
+					<div class="menu-top">
+						<div class="menu-title">
+							<p>Naturally Healthy</p>
+						</div>
+						<ul class="">
+							<li class=""><a href="/#block-apertura" title="Conócenos">Conócenos</a></li>
+							<li class=""><a href="/#products" title="Productos">Productos</a></li>
+							<li class=""><a href="/#Contacto" title="Contacto">Contacto</a></li>
+						</ul>
+					</div>
+					<div class="menu-down">
+						<div class="menu-title">
+							<p class="xs-hidden">Nuestros Productos</p>
+						</div>
+						<div class="products-container xs-hidden">
+							<div class="element">
+								<a href="/argan.html">
+									<img class="img60" src="images/03_ACEITE_argan_catalogo.png" alt="Aceite de Argán">
+								</a>
+							</div>
+							<div class="element">
+								<a href="/almendra.html">
+									<img class="img60" src="images/03_ACEITE_almendra_catalogo.png"
+										alt="Aceite de Almendra">
+								</a>
+							</div>
+							<div class="element">
+								<a href="/aguacate.html">
+									<img class="img60" src="images/03_ACEITE_aguacate_catalogo.png"
+										alt="Aceite de Aguacate">
+								</a>
+							</div>
+							<div class="element">
+								<a href="/calabaza.html">
+									<img class="img60" src="images/03_ACEITE_calabaza_catalogo.png"
+										alt="Aceite de Calabaza">
+								</a>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</nav>
+			<!-- END: menu principal -->
+		</div>
+	</header>
+	<aside class="aside">
+		<div class="aside-v aside-f">
+			<a id="catalog" class="navbar-links" aria-label="navbar-link">Compra en Amazon</a>
+		</div>
+		<div class="aside-v aside-s">
+			<a id="catalog" class="navbar-links" aria-label="navbar-link">Descargar Catálogo</a>
+		</div>
+	</aside>
+	<main id="main" class="wrap home">
+		<section class="block-product">
+			<div id="" class="header-mbl">
+				<a href="/#products">Volver a productos</a>
+				<h2>Aceite de argán</h2>
+			</div>
+			<div class="left-40">
+				<img class="img65" src="../../images/03_ACEITE_argan_catalogo.png" alt="Conócenos">
+			</div>
+			<div class="right-60">
+				<div id="" class="link back">
+					<a href="/#products">Volver a productos</a>
+				</div>
+				<div id="title" class="text title">
+					<h2>Aceite de argán</h2>
+					<p class="text subtitle">Aceite obtenido del prensado en frío de almendras de argán
+						ligeramente tostadas, utilizando los métodos tradicionales.</p>
+				</div>
+				<div id="properties" class="cols-2">
+					<div class="col-left">
+						<h3>Propiedades nutricionales</h3>
+						<p>El aceite de argán se caracteriza por sus
+							excelentes propiedades nutritivas gracias a
+							su alto contenido en vitamina E, carotenos
+							y ácidos grasos insaturados que
+							contribuyen al correcto funcionamiento del
+							sistema cardiovascular. Ayuda a prevenir la
+							obesidad.</p>
+					</div>
+					<div class="col-right">
+						<h3>Uso en cocina</h3>
+						<p>Su exótico aroma y sabor afrutado lo
+							hace muy recomendable para aderezar
+							ensaladas, sopas, carnes y pescados.</p>
+						<a class="hidden" href="recetas/argan.html">Recetas con Aceite de argán</a>
+					</div>
+				</div>
+				<a class="bottom" href="www.amazon.com/naturallyhealthy/argan">
+					<div class="block-compra">
+						<div class="cost"><div class="basket-img"></div></div>
+						<div class="link-amazon">
+							<p>Comprar en AMAZON</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</section>
+	</main>
+	<script>
+		function showHiddenText() {
+			var textToShow = document.getElementById("text-hidden");
+			var btn = document.getElementById("btn");
+
+			if (textToShow.classList.contains("hidden")) {
+				textToShow.classList.remove("hidden");
+				textToShow.classList.add("shown");
+				// textToShow.style.maxHeight = "100%";
+				btn.classList.remove("text-show-hidden");
+				btn.classList.add("text-hide-shown");
+			} else {
+				textToShow.classList.remove("shown");
+				// textToShow.style.maxHeight = "0";
+				textToShow.classList.add("hidden");
+				btn.classList.add("text-show-hidden");
+				btn.classList.remove("text-hide-shown");
+			}
+		}
+
+		function toggleMenu() {
+			var menu = document.getElementById("menu");
+			var btnMenu = document.getElementById("btn-menu");
+
+			if (menu.classList.contains("hidden")) {
+				menu.classList.remove("hidden");
+			} else {
+				menu.classList.add("hidden");
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-@import "vars";
+@import "vars.less";
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -13,17 +13,20 @@ body {
 
     &.es {
         #lang-es {
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid @color-dark-green;
+            font-weight: 500;
         }
     }
     &.en {
         #lang-en {
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid @color-dark-green;
+            font-weight: 500;
         }
     }
     &.fr {
         #lang-fr {
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid @color-dark-green;
+            font-weight: 500;
         }
     }
 
@@ -38,8 +41,8 @@ body {
         transition: all 1s ease-in;
 
         @media @media-ipad {
-            height: calc(100vh - 100px);
-            margin-top: 99px;
+            height: calc(100vh - @s-menu-h);
+            margin-top: @s-menu-h;
             left: 100px;
             max-height: 100vh;
         }
@@ -49,7 +52,7 @@ body {
             height: 40%;
 
             @media @media-ipad {
-                width: calc(100% - 100px);
+                width: calc(100% - @s-menu-h);
             }
         }
 
@@ -72,14 +75,14 @@ body {
                 line-height: 55px;
 
                 @media @media-desktop {
-                    line-height: 100px;
+                    line-height: @s-menu-h;
                 }
             }
         }
 
         .menu-down {
             @media @media-ipad {
-                width: calc(100% - 100px);
+                width: calc(100% - @s-menu-h);
                 position: relative;
                 overflow: hidden;
                 display: block;
@@ -87,7 +90,7 @@ body {
                 padding-bottom: 60px;
             }
 
-            .menu-title p {
+            .menu-title a {
                 @media @media-ipad {
                     bottom: 50px;
                 }
@@ -159,7 +162,7 @@ body {
                 width: 17%;
             }
 
-            p {
+            a {
                 -webkit-transform: rotate(-90deg);
                 -moz-transform: rotate(-90deg);
                 -ms-transform: rotate(-90deg);
@@ -198,7 +201,7 @@ body {
 
         @media @media-ipad {
             left: 100px;
-            width: calc(100% - @s-menu-h);
+            width: calc(100% - 100px);
         }
 
         &.block-apertura {
@@ -210,6 +213,7 @@ body {
                 display: block;
                 opacity: 1;
                 max-height: 950px;
+                z-index: 1;
             }
 
             @media @media-ipad {}
@@ -219,7 +223,7 @@ body {
                 padding: 40px;
                 float: left;
                 position: relative;
-                margin-top: 100px;
+                margin-top: @s-menu-h;
                 display: flex;
                 flex-direction: column;
                 // z-index: 1;
@@ -272,7 +276,7 @@ body {
                     }
 
                     @media @media-desktop {
-                        margin-top: 100px;
+                        margin-top: @s-menu-h;
                     }
 
                     @media @media-hd {
@@ -394,7 +398,7 @@ body {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        height: 100px;
+                        height: @s-menu-h;
                     }
                 }
 
@@ -514,7 +518,7 @@ body {
             height: auto;
 
             @media @media-ipad {
-                height: calc(100% - 100px);
+                height: calc(100% - @s-menu-h);
                 max-width: 95%;
                 overflow-y: scroll;
             }
@@ -653,8 +657,8 @@ body {
             }
 
             @media @media-ipad {
-                margin-top: 100px;
-                // height: calc(100vh - 100px);
+                margin-top: @s-menu-h;
+                // height: calc(100vh - @s-menu-h);
                 height: 100%;
                 position: relative;
             }
@@ -683,7 +687,7 @@ body {
                     width: 40%;
                     float: left;
                     padding-left: 90px;
-                    height: calc(100vh - 100px);
+                    // height: calc(100vh - @s-menu-h);
                 }
 
                 .img65 {
@@ -834,7 +838,7 @@ body {
                 display: table;
                 position: relative;
                 bottom: 0;
-                height: 100px;
+                height: @s-menu-h;
                 width: 100%;
                 align-content: center;
                 font-size: 27px;
@@ -855,6 +859,14 @@ body {
                     height: 100%;
                     position: relative;
                     color: @color-green;
+
+                    .basket-img {
+                        background: url(../../images/99_basket.svg);
+                        display: block;
+                        width: 80px;
+                        height: 80px;
+                        border: none;
+                    }
                 }
 
                 .link-amazon {
@@ -892,13 +904,14 @@ body {
             max-width: 100vw;
             width: 100%;
             vertical-align: middle;
-            border-bottom: 1px solid white;
-            border-top: 1px solid white;
-            .Gradient(@direction: to bottom; @stops: rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+            border-bottom: 1px solid @color-dark-green;
+            border-top: 1px solid @color-dark-green;
+            background: @color-light-green;
+            // .Gradient(@direction: to bottom; @stops: rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 
             @media @media-ipad {
                 height: @s-menu-h;
-                max-height: @s-menu-h;
+                max-height: @s-menu-h;                
             }
         }
 
@@ -910,23 +923,29 @@ body {
             height: 100%;
             position: relative;
 
-            @media @media-ipad {
-                width: 190px;
+            @media @media-only-handheld {
+                left: 18%;
             }
 
-            a {
-                background-image: url(../../images/00_header-logo_mbl.png);
+            @media @media-ipad {
+                width: 255px;
+                margin: 0 35px;
+            }
+
+            a {                
+                background-image: url(../../images/00_header-logo-16.png);
                 background-repeat: no-repeat;
                 display: block;
                 overflow: hidden;
                 width: 100%;
-                height: 100px;
+                height: 100%;
                 background-position: top;
-                background-size: contain;
+                background-size: cover;
+                border: none;
 
-                @media @media-ipad {
-                    background-image: none;
-                }
+                // @media @media-ipad {                    
+                //     background-image: url(../../images/00_header-logo-16.png);
+                // }
 
                 img {
                     display: none;
@@ -941,8 +960,8 @@ body {
         .btn-menu {
             margin: 0;
             width: 33%;
-            border-right: solid 1px white;
-            border-left: solid 1px white;
+            border-right: solid 1px @color-dark-green;
+            border-left: solid 1px @color-dark-green;
             height: 99%;
             right: 0;
             position: absolute;
@@ -963,6 +982,7 @@ body {
                 -ms-transform: rotate(90deg);
                 -o-transform: rotate(90deg);
                 transform: rotate(90deg);
+                color: @color-dark-green;
             }
 
             &.arrow-up {
@@ -973,13 +993,19 @@ body {
                     -ms-transform: rotate(-90deg);
                     -o-transform: rotate(-90deg);
                     transform: rotate(-90deg);
+                    color: @color-dark-green;
                 }
+            }
+
+            a {
+                color: @color-dark-green;
+                border-bottom: 1px solid @color-dark-green;
             }
         }
 
         .lang-container {
             display: none;
-            left: 190px;
+            left: 325px;
             width: 150px;
             justify-content: space-around;
             padding: 0 15px;
@@ -990,6 +1016,7 @@ body {
 
             a.lang {
                 border-bottom: none;
+                color: @color-dark-green;
             }
 
             &.btn-menu::after {
@@ -1017,11 +1044,15 @@ body {
     }
 }
 
-#products {
+#contact, #meetus, #products {
     position: relative;
-    top: -100px;
+    top: -@s-menu-h;
 }
 
+#catalog{
+    position: absolute;
+    top:-300px;
+}
 
 @font-face {
     font-family: 'Sumana';
@@ -1111,11 +1142,11 @@ a:hover {
     }
 
     .aside-f {
-        bottom: 139px;
+        bottom: 190px;
     }
 
     .aside-s {
-        bottom: 331px;
+        bottom: 380px;
     }
 
     a {
