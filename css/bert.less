@@ -12,18 +12,35 @@ body {
     @media @media-ipad {}
 
     &.es {
-        #lang-es {
+        .menu {
+            #lang-es {            
+                border-bottom: 1px solid white;                
+            }
+        }
+        #lang-es {            
             border-bottom: 1px solid @color-dark-green;
             font-weight: 500;
         }
     }
+
     &.en {
+        .menu {
+            #lang-en {            
+                border-bottom: 1px solid white;                
+            }
+        }
         #lang-en {
             border-bottom: 1px solid @color-dark-green;
             font-weight: 500;
         }
     }
+
     &.fr {
+        .menu {
+            #lang-fr {            
+                border-bottom: 1px solid white;                
+            }
+        }
         #lang-fr {
             border-bottom: 1px solid @color-dark-green;
             font-weight: 500;
@@ -49,10 +66,11 @@ body {
 
         .menu-top {
             border-bottom: 1px solid white;
-            height: 40%;
+            height: calc(50vh - 76px);
 
             @media @media-ipad {
-                width: calc(100% - @s-menu-h);
+                width: calc(50vh - @s-menu-h);
+                height: 40%;
             }
         }
 
@@ -73,10 +91,58 @@ body {
                 border-bottom: none;
                 font-size: 32px;
                 line-height: 55px;
+                font-weight: 100;
+
+                &:hover {
+                    border-bottom: 1px solid white;
+                }
 
                 @media @media-desktop {
                     line-height: @s-menu-h;
                 }
+            }
+        }
+
+        .link {
+            height: calc(20vh);
+            border-bottom: 1px solid white;
+            display: flex;
+            align-items: center;
+
+            @media @media-ipad {
+                display: none;
+            }
+
+            a {
+                margin-left: 78px;
+                text-decoration: none;
+                border-bottom: none;
+                font-size: 32px;
+                line-height: 34px;
+                font-weight: 100;
+            }
+
+            &.compra a {
+                width: 185px;
+            }
+        }
+
+        .langs {
+            height: calc(10vh);
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            flex-direction: row;
+            padding: 0 50px;
+
+            a {
+                margin: 0 auto;
+                text-align: center;
+                border: none;
+                font-size: 25px;
+                font-weight: 100;
             }
         }
 
@@ -90,7 +156,7 @@ body {
                 padding-bottom: 60px;
             }
 
-            .menu-title a {
+            .menu-title p {
                 @media @media-ipad {
                     bottom: 50px;
                 }
@@ -152,6 +218,7 @@ body {
             font-weight: 200;
 
             @media @media-only-handheld {
+                width: 75px;
                 display: flex;
                 align-content: center;
                 flex-direction: column;
@@ -162,12 +229,17 @@ body {
                 width: 17%;
             }
 
-            a {
+            p {
                 -webkit-transform: rotate(-90deg);
                 -moz-transform: rotate(-90deg);
                 -ms-transform: rotate(-90deg);
                 -o-transform: rotate(-90deg);
                 transform: rotate(-90deg);
+
+                @media @media-only-handheld {
+                    width: 125px;
+                    text-align: center;
+                }
 
                 @media @media-ipad {
                     bottom: 90px;
@@ -371,7 +443,7 @@ body {
                 }
 
                 img {
-                    @media @media-hd {                        
+                    @media @media-hd {
                         margin: auto;
                     }
                 }
@@ -842,10 +914,14 @@ body {
                 height: 75px;
                 width: 100%;
                 align-content: center;
-                font-size: 27px;
+                font-size: 20px;
 
                 @media @media-laptop {
                     height: 125px;
+                }
+
+                @media @media-desktop {
+                    font-size: 27px;
                 }
 
                 div {
@@ -871,7 +947,7 @@ body {
                         display: block;
                         width: 50px;
                         height: 50px;
-                        border: none;                        
+                        border: none;
                     }
                 }
 
@@ -917,7 +993,7 @@ body {
 
             @media @media-ipad {
                 height: @s-menu-h;
-                max-height: @s-menu-h;                
+                max-height: @s-menu-h;
             }
         }
 
@@ -938,7 +1014,7 @@ body {
                 margin: 0 35px;
             }
 
-            a {                
+            a {
                 background-image: url(../../images/00_header-logo-16.png);
                 background-repeat: no-repeat;
                 display: block;
@@ -1050,14 +1126,16 @@ body {
     }
 }
 
-#contact, #meetus, #products {
+#contact,
+#meetus,
+#products {
     position: relative;
     top: -@s-menu-h;
 }
 
-#catalog{
+#catalog {
     position: absolute;
-    top:-300px;
+    top: -300px;
 }
 
 @font-face {
