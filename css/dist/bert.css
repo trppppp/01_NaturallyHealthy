@@ -52,7 +52,6 @@ body .menu-container .menu-top {
 }
 @media only screen and (min-width: 1024px) {
   body .menu-container .menu-top {
-    width: calc(50vh - 135px);
     height: 40%;
   }
 }
@@ -885,7 +884,7 @@ body section.block-product .block-compra .cost {
   color: #2f663b;
 }
 body section.block-product .block-compra .cost .basket-img {
-  background: url(../../images/99_basket.svg);
+  background: url(https://trppppp.github.io/01_NaturallyHealthy/images/99_basket.svg);
   background-repeat: no-repeat;
   display: block;
   width: 50px;
