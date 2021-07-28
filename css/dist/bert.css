@@ -1017,6 +1017,7 @@ body .page-header .lang-container {
 @media only screen and (min-width: 1024px) {
   body .page-header .lang-container {
     display: flex;
+    z-index: 1;
   }
 }
 body .page-header .lang-container a.lang {

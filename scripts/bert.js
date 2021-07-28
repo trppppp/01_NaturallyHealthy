@@ -1,10 +1,13 @@
 //Mostrar texto oculto
 var textToShow = document.getElementById("text-hidden");
-var btn = document.getElementById("btn");		
+var btn = document.getElementById("btn");
 
-btn.addEventListener('click', function () {			
-    toggleHiddenText();
-}, false);
+if (btn) {
+    btn.addEventListener('click', function () {
+        toggleHiddenText();
+    }, false);
+}
+
 
 //Menú
 var menu = document.getElementById("menu-container");
@@ -15,22 +18,27 @@ var menuProductos = document.getElementById("btn-menu-p");
 var menuMeetUs = document.getElementById("btn-menu-m");
 var menuContacto = document.getElementById("btn-menu-c");
 
-btnMenu.addEventListener('click', function () {
-    toggleMenu();
-}, false);
-
-menuProductos.addEventListener('click', function () {
-    toggleMenu();
-}, false);
-
-menuContacto.addEventListener('click', function () {
-    toggleMenu();
-}, false);
-
-menuMeetUs.addEventListener('click', function () {
-    toggleMenu();
-    toggleHiddenText();
-}, false);
+if (btnMenu) {
+    btnMenu.addEventListener('click', function () {
+        toggleMenu();
+    }, false);
+}
+if (menuProductos) {
+    menuProductos.addEventListener('click', function () {
+        toggleMenu();
+    }, false);
+}
+if (menuContacto) {
+    menuContacto.addEventListener('click', function () {
+        toggleMenu();
+    }, false);
+}
+if (menuMeetUs) {
+    menuMeetUs.addEventListener('click', function () {
+        toggleMenu();
+        toggleHiddenText();
+    }, false);
+}
 
 function toggleHiddenText() {
     window.console.log("pasa tron");
@@ -43,7 +51,7 @@ function toggleHiddenText() {
     }
 };
 
-function toggleMenu(){
+function toggleMenu() {
     if (menu.classList.contains("op0-menu")) {
         menu.classList.remove("op0-menu");
         btnMenu.classList.add("arrow-up");

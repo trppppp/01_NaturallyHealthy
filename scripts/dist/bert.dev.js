@@ -3,9 +3,13 @@
 //Mostrar texto oculto
 var textToShow = document.getElementById("text-hidden");
 var btn = document.getElementById("btn");
-btn.addEventListener('click', function () {
-  toggleHiddenText();
-}, false); //Menú
+
+if (btn) {
+  btn.addEventListener('click', function () {
+    toggleHiddenText();
+  }, false);
+} //Menú
+
 
 var menu = document.getElementById("menu-container");
 var btnMenu = document.getElementById("btn-menu");
@@ -14,19 +18,31 @@ var txtHidden = document.getElementById("text-hidden");
 var menuProductos = document.getElementById("btn-menu-p");
 var menuMeetUs = document.getElementById("btn-menu-m");
 var menuContacto = document.getElementById("btn-menu-c");
-btnMenu.addEventListener('click', function () {
-  toggleMenu();
-}, false);
-menuProductos.addEventListener('click', function () {
-  toggleMenu();
-}, false);
-menuContacto.addEventListener('click', function () {
-  toggleMenu();
-}, false);
-menuMeetUs.addEventListener('click', function () {
-  toggleMenu();
-  toggleHiddenText();
-}, false);
+
+if (btnMenu) {
+  btnMenu.addEventListener('click', function () {
+    toggleMenu();
+  }, false);
+}
+
+if (menuProductos) {
+  menuProductos.addEventListener('click', function () {
+    toggleMenu();
+  }, false);
+}
+
+if (menuContacto) {
+  menuContacto.addEventListener('click', function () {
+    toggleMenu();
+  }, false);
+}
+
+if (menuMeetUs) {
+  menuMeetUs.addEventListener('click', function () {
+    toggleMenu();
+    toggleHiddenText();
+  }, false);
+}
 
 function toggleHiddenText() {
   window.console.log("pasa tron");
