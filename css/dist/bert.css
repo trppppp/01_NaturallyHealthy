@@ -1220,3 +1220,10 @@ a {
 .op0-menu ul {
   display: none !important;
 }
+.op0-menu .menu-top,
+.op0-menu .menu-down,
+.op0-menu .link,
+.op0-menu .lang {
+  position: absolute;
+  top: -1000px;
+}

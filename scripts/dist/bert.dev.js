@@ -18,6 +18,11 @@ var txtHidden = document.getElementById("text-hidden");
 var menuProductos = document.getElementById("btn-menu-p");
 var menuMeetUs = document.getElementById("btn-menu-m");
 var menuContacto = document.getElementById("btn-menu-c");
+var menuTop = document.getElementById("mtop");
+var menuDown = document.getElementById("mdown");
+var menuBuy = document.getElementById("mbuy");
+var menuCatalog = document.getElementById("mcat");
+var lang = document.getElementById("lang");
 
 if (btnMenu) {
   btnMenu.addEventListener('click', function () {
@@ -65,12 +70,22 @@ function toggleMenu() {
     menuVar.classList.add("active");
     btn.style.zIndex = 0;
     txtHidden.style.zIndex = 0;
+    menuTop.style.zIndex = 0;
+    menuDown.style.zIndex = 0;
+    menuBuy.style.zIndex = 0;
+    menuCatalog.style.zIndex = 0;
+    lang.style.zIndex = 0;
   } else {
     menu.classList.add('op0-menu');
     btnMenu.classList.remove("arrow-up");
     menuVar.classList.remove("active");
     btn.style.zIndex = 1;
     txtHidden.style.zIndex = 1;
+    menuTop.style.zIndex = 1;
+    menuDown.style.zIndex = 1;
+    menuBuy.style.zIndex = 1;
+    menuCatalog.style.zIndex = 1;
+    lang.style.zIndex = 1;
   }
 }
 

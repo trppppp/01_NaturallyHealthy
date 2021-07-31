@@ -48,7 +48,7 @@
 			<nav id="menu" class="menu" role="navigation">
 
 				<div id="menu-container" class="menu-container op0-menu">
-					<div class="menu-top">
+					<div id="mtop" class="menu-top">
 						<div class="menu-title">
 							<p class="">Naturally Healthy</p>
 						</div>
@@ -58,7 +58,7 @@
 							<li id="btn-menu-c"><a href="https://trppppp.github.io/01_NaturallyHealthy/#contact" title="Contacto">Contacto</a></li>
 						</ul>
 					</div>
-					<div class="menu-down">
+					<div id="mdown" class="menu-down">
 						<div class="menu-title">
 							<p class="xs-hidden">Nuestros Productos</p>
 						</div>
@@ -88,10 +88,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="link compra">
+					<div id="mbuy" class="link compra">
 						<a href="https://www.amazon.es/dp/B098TH418D?ref=myi_title_dp" target="_blank" class="" >Compra <br> en Amazon</a>
 					</div>
-					<div class="link catalog">
+					<div id="mcat" class="link catalog">
 						<a href="https://trppppp.github.io/01_NaturallyHealthy/media/NaturallyHealthy_ES.pdf" target="_blank" class="" >Descarga <br> nuestro catálogo</a>
 					</div>
 					<div id="lang" class="langs">
@@ -235,70 +235,6 @@
 			</form>
 		</section>
 	</main>
-
-	<!-- <script>
-
-		//Mostrar texto oculto
-var textToShow = document.getElementById("text-hidden");
-var btn = document.getElementById("btn");		
-
-btn.addEventListener('click', function () {			
-    toggleHiddenText();
-}, false);
-
-//Menú
-var menu = document.getElementById("menu-container");
-var btnMenu = document.getElementById("btn-menu");
-var menuVar = document.getElementById("header");
-var txtHidden = document.getElementById("text-hidden");
-var menuProductos = document.getElementById("btn-menu-p");
-var menuMeetUs = document.getElementById("btn-menu-m");
-var menuContacto = document.getElementById("btn-menu-c");
-
-btnMenu.addEventListener('click', function () {
-    toggleMenu();
-}, false);
-
-menuProductos.addEventListener('click', function () {
-    toggleMenu();
-}, false);
-
-menuContacto.addEventListener('click', function () {
-    toggleMenu();
-}, false);
-
-menuMeetUs.addEventListener('click', function () {
-    toggleMenu();
-    toggleHiddenText();
-}, false);
-
-function toggleHiddenText() {
-    window.console.log("pasa tron");
-    if (textToShow.classList.contains("op0")) {
-        textToShow.classList.remove("op0");
-        btn.classList.add("text-hide-shown");
-    } else {
-        textToShow.classList.add('op0');
-        btn.classList.remove("text-hide-shown");
-    }
-};
-
-function toggleMenu(){
-    if (menu.classList.contains("op0-menu")) {
-        menu.classList.remove("op0-menu");
-        btnMenu.classList.add("arrow-up");
-        menuVar.classList.add("active");
-        // btn.style.zIndex = 0;
-        // txtHidden.style.zIndex = 0;
-    } else {
-        menu.classList.add('op0-menu');
-        btnMenu.classList.remove("arrow-up");
-        menuVar.classList.remove("active");
-        // btn.style.zIndex = 1;
-        // txtHidden.style.zIndex = 1;
-    }
-};
-	</script> -->
 
 
 </body>
