@@ -695,6 +695,10 @@ body section.block-product {
     position: relative;
   }
 }
+body section.block-product .header-mbl {
+  width: 100%;
+  padding: 0 30px;
+}
 body section.block-product .header-mbl a::before {
   content: "< ";
 }
@@ -705,6 +709,7 @@ body section.block-product .header-mbl a::before {
 }
 body section.block-product .header-mbl h2 {
   margin-top: 15px;
+  font-size: 32px;
 }
 body section.block-product .left-40 {
   width: 70%;
@@ -763,7 +768,7 @@ body section.block-product .right-60 .text.title {
 body section.block-product .right-60 .text.title h2 {
   font-weight: 300;
   font-size: 45px;
-  margin-bottom: 22px;
+  padding-bottom: 22px;
 }
 @media only screen and (max-width: 1023px) {
   body section.block-product .right-60 .text.title h2 {
@@ -773,13 +778,13 @@ body section.block-product .right-60 .text.title h2 {
 @media only screen and (min-width: 1024px) {
   body section.block-product .right-60 .text.title h2 {
     font-size: 35px;
-    margin-bottom: 28px;
+    padding-bottom: 28px;
   }
 }
 @media only screen and (min-width: 1366px) {
   body section.block-product .right-60 .text.title h2 {
     font-size: 45px;
-    margin-bottom: 22px;
+    padding-bottom: 22px;
   }
 }
 body section.block-product .right-60 .text.title .text.subtitle {
