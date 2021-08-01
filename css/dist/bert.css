@@ -14,12 +14,18 @@ body.es #lang-es {
   border-bottom: 1px solid #275130;
   font-weight: 500;
 }
+body.en {
+  background: #3b7243;
+}
 body.en .menu #lang-en {
   border-bottom: 1px solid white;
 }
 body.en #lang-en {
   border-bottom: 1px solid #275130;
   font-weight: 500;
+}
+body.fr {
+  background: #427c49;
 }
 body.fr .menu #lang-fr {
   border-bottom: 1px solid white;
