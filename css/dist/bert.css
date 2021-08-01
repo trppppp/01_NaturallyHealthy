@@ -361,12 +361,14 @@ body section.block-apertura img {
   body section.block-apertura h2 {
     width: 85%;
     margin-top: 90px;
+    padding-bottom: 20px;
   }
 }
 @media only screen and (min-width: 1366px) {
   body section.block-apertura h2 {
     width: 75%;
     margin-top: 160px;
+    padding-bottom: 25px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -710,6 +712,7 @@ body section.block-product .header-mbl a::before {
 body section.block-product .header-mbl h2 {
   margin-top: 15px;
   font-size: 32px;
+  padding-bottom: 10px;
 }
 body section.block-product .left-40 {
   width: 70%;
