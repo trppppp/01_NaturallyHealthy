@@ -1223,7 +1223,7 @@ a {
 .op0-menu .menu-top,
 .op0-menu .menu-down,
 .op0-menu .link,
-.op0-menu .lang {
+.op0-menu .langs {
   position: absolute;
-  top: -1000px;
+  top: -2000px;
 }
