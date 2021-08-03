@@ -613,6 +613,7 @@ body section.block-contact input::placeholder {
   font-size: 18px;
 }
 body section.block-contact input[type="submit"] {
+  display: none;
   background: white;
   color: #2f663b;
   font-family: 'Roboto';
@@ -1251,4 +1252,5 @@ a {
   display: block;
   max-width: 50%;
   margin: 0 auto;
+  padding: 40px;
 }

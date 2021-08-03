@@ -24,7 +24,7 @@ var lang = document.getElementById("lang");
 
 //Contact
 var cboxLopd = document.getElementById("cbox");
-var btnSend = document.getElementsByName("submit");
+var btnSend = document.getElementById("submit");
 
 if (btnMenu) {
     btnMenu.addEventListener('click', function () {
@@ -48,7 +48,7 @@ if (menuMeetUs) {
     }, false);
 }
 
-if (cboxLopd) {
+if (cboxLopd && btnSend) {
     cboxLopd.addEventListener('click', function () {
         toggleSendContactBtn();        
     }, false);
