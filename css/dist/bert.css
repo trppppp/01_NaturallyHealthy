@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background: #2f663b;
+  background: #427c49;
   font-weight: 300;
   color: white;
   margin: 0;
@@ -14,18 +14,12 @@ body.es #lang-es {
   border-bottom: 1px solid #275130;
   font-weight: 500;
 }
-body.en {
-  background: #3b7243;
-}
 body.en .menu #lang-en {
   border-bottom: 1px solid white;
 }
 body.en #lang-en {
   border-bottom: 1px solid #275130;
   font-weight: 500;
-}
-body.fr {
-  background: #427c49;
 }
 body.fr .menu #lang-fr {
   border-bottom: 1px solid white;
@@ -41,7 +35,7 @@ body .menu-container {
   opacity: 1;
   margin-top: 76px;
   left: 0;
-  background: #2f663b;
+  background: #427c49;
   transition: all 1s ease-in;
 }
 @media only screen and (min-width: 1024px) {
@@ -615,7 +609,7 @@ body section.block-contact input::placeholder {
 body section.block-contact input[type="submit"] {
   display: none;
   background: white;
-  color: #2f663b;
+  color: #427c49;
   font-family: 'Roboto';
   font-size: 22px;
   line-height: 25px;
@@ -896,7 +890,7 @@ body section.block-product .block-compra .cost {
   background: #cfdecc;
   height: 100%;
   position: relative;
-  color: #2f663b;
+  color: #427c49;
 }
 body section.block-product .block-compra .cost .basket-img {
   background: url(https://trppppp.github.io/01_NaturallyHealthy/images/99_basket.svg);
@@ -926,7 +920,7 @@ body .page-header {
   z-index: 1;
 }
 body .page-header.active {
-  background: #2f663b;
+  background: #427c49;
 }
 body .page-header .header-content {
   height: 77px;
@@ -1157,7 +1151,7 @@ a:hover {
   border-bottom: none;
 }
 .bg-green {
-  background-color: #2f663b;
+  background-color: #427c49;
 }
 .bg-dark-green {
   background-color: #275130;
