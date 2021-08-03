@@ -25,7 +25,7 @@ var menuCatalog = document.getElementById("mcat");
 var lang = document.getElementById("lang"); //Contact
 
 var cboxLopd = document.getElementById("cbox");
-var btnSend = document.getElementById("submit");
+var btnSend = document.getElementById("btnSend");
 
 if (btnMenu) {
   btnMenu.addEventListener('click', function () {
