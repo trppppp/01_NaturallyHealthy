@@ -50,7 +50,7 @@ if (menuMeetUs) {
 
 if (cboxLopd && btnSend) {
     cboxLopd.addEventListener('click', function () {
-        toggleSendContactBtn();        
+        // toggleSendContactBtn();        
     }, false);
 }
 
@@ -90,10 +90,12 @@ function toggleMenu() {
     }
 };
 
-function toggleSendContactBtn() {    
+function toggleSendContactBtn() {        
     if (cboxLopd.checked = false) {
-        btnSend.classList.add("hidden");
+        btnSend.classList.add("hidden");        
+        cboxLopd.checked = false;
     } else {
         btnSend.classList.remove("hidden");
+        cboxLopd.checked = true;
     }
 };
