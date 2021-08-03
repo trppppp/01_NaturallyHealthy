@@ -157,38 +157,7 @@
 				</a>
 			</div>
 		</section>
-	</main>
-	<script>
-		function showHiddenText() {
-			var textToShow = document.getElementById("text-hidden");
-			var btn = document.getElementById("btn");
-
-			if (textToShow.classList.contains("hidden")) {
-				textToShow.classList.remove("hidden");
-				textToShow.classList.add("shown");
-				// textToShow.style.maxHeight = "100%";
-				btn.classList.remove("text-show-hidden");
-				btn.classList.add("text-hide-shown");
-			} else {
-				textToShow.classList.remove("shown");
-				// textToShow.style.maxHeight = "0";
-				textToShow.classList.add("hidden");
-				btn.classList.add("text-show-hidden");
-				btn.classList.remove("text-hide-shown");
-			}
-		}
-
-		function toggleMenu() {
-			var menu = document.getElementById("menu");
-			var btnMenu = document.getElementById("btn-menu");
-
-			if (menu.classList.contains("hidden")) {
-				menu.classList.remove("hidden");
-			} else {
-				menu.classList.add("hidden");
-			}
-		}
-	</script>
+	</main>	
 </body>
 
 </html>
