@@ -607,7 +607,6 @@ body section.block-contact input::placeholder {
   font-size: 18px;
 }
 body section.block-contact input[type="submit"] {
-  display: none;
   background: white;
   color: #427c49;
   font-family: 'Roboto';
@@ -1244,7 +1243,22 @@ a {
   background: white;
   color: black !important;
   display: block;
-  max-width: 50%;
+  max-width: 90%;
   margin: 0 auto;
   padding: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .document {
+    max-width: 800%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .document {
+    max-width: 65%;
+  }
+}
+@media only screen and (min-width: 1680px) {
+  .document {
+    max-width: 50%;
+  }
 }

@@ -657,8 +657,7 @@ body {
                 }
             }
 
-            input[type="submit"] {
-                display: none;
+            input[type="submit"] {                
                 background: white;
                 color: @color-green;
                 font-family: 'Roboto';
@@ -1376,7 +1375,19 @@ a {
     background: white;
     color: black !important;
     display: block;
-    max-width: 50%;
+    max-width: 90%;
     margin: 0 auto;
     padding: 40px;
+
+    @media @media-tablet {
+        max-width: 800%;
+    }
+
+    @media @media-ipad {
+        max-width: 65%;
+    }
+
+    @media @media-desktop {
+        max-width: 50%;
+    }
 }
