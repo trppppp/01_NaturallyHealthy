@@ -1242,3 +1242,13 @@ a {
   position: absolute;
   top: -2000px;
 }
+.contact-lopd {
+  float: left;
+}
+.document {
+  background: white;
+  color: black;
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+}

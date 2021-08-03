@@ -22,7 +22,10 @@ var menuTop = document.getElementById("mtop");
 var menuDown = document.getElementById("mdown");
 var menuBuy = document.getElementById("mbuy");
 var menuCatalog = document.getElementById("mcat");
-var lang = document.getElementById("lang");
+var lang = document.getElementById("lang"); //Contact
+
+var cboxLopd = document.getElementById("cbox");
+var btnSend = document.getElementsByName("submit");
 
 if (btnMenu) {
   btnMenu.addEventListener('click', function () {
@@ -49,9 +52,13 @@ if (menuMeetUs) {
   }, false);
 }
 
-function toggleHiddenText() {
-  window.console.log("pasa tron");
+if (cboxLopd) {
+  cboxLopd.addEventListener('click', function () {
+    toggleSendContactBtn();
+  }, false);
+}
 
+function toggleHiddenText() {
   if (textToShow.classList.contains("op0")) {
     textToShow.classList.remove("op0");
     btn.classList.add("text-hide-shown");
@@ -86,6 +93,16 @@ function toggleMenu() {
     menuBuy.style.zIndex = 1;
     menuCatalog.style.zIndex = 1;
     lang.style.zIndex = 1;
+  }
+}
+
+;
+
+function toggleSendContactBtn() {
+  if (cboxLopd.checked = false) {
+    btnSend.classList.add("hidden");
+  } else {
+    btnSend.classList.remove("hidden");
   }
 }
 
