@@ -649,6 +649,7 @@ body section.block-contact h2 {
 }
 body section.block-contact .contact-right {
   float: left;
+  width: 100%;
 }
 @media only screen and (min-width: 1024px) {
   body section.block-contact .contact-right {
@@ -1059,7 +1060,14 @@ body h2 {
 #meetus,
 #products {
   position: relative;
-  top: -135px;
+  top: -75px;
+}
+@media only screen and (min-width: 1024px) {
+  #contact,
+  #meetus,
+  #products {
+    top: -135px;
+  }
 }
 #catalog {
   position: absolute;
@@ -1238,6 +1246,19 @@ a {
 }
 .contact-lopd {
   float: left;
+}
+@media only screen and (max-width: 1023px) {
+  .contact-lopd input {
+    margin: 0;
+    position: absolute;
+    float: left;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .contact-lopd label {
+    display: inline-block;
+    margin-left: 20px;
+  }
 }
 .document {
   background: white;

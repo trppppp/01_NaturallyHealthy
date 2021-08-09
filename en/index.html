@@ -217,18 +217,26 @@
 
 					<!-- Optional (hidden) fields -->
 					<!-- Custom email Subject -->
-					<input type="hidden" name="_subject" value="Naturally Healthy WEB - Contact">
+					<input type="hidden" name="_subject" value="Naturally Healthy WEB - Contacto">
 					<!-- Custom email ReplyTo Address -->
 					<input type="hidden" name="_replyto" value="foo@bar.co">
 					<!-- Redirect to a page after recaptcha -->
-					<input type="hidden" name="_after" value="https://myhomepage.net/">
+					<input type="hidden" name="_after" value="naturallyhealthybcn.com">
 					<!-- Honeypot (to catch comment spam bots) -->
 					<input type="hidden" name="_honeypot" value="">
 					<!-- Apply a custom confirmation message on the second step -->
-					<input type="hidden" name="_confirmation" value="">
+					<input type="hidden" name="_confirmation" value="Enviado correctamente">
 
 					<!-- Submit Button -->
-					<input type="submit" name="submit" value="SEND" class="btn btn-primary">
+					<input type="submit" id="btnSend" name="submit" value="SEND" class="btn btn-primary hidden" disabled="true">
+
+				</div>
+				<div class="contact-lopd">
+					<input type="checkbox" id="cbox" value="política de privacidad">
+					<label for="cbox">He leído y acepto la <a
+							href="https://trppppp.github.io/01_NaturallyHealthy/politica-privacidad.html"
+							target="_blank">política de
+							privacidad</a> de Naturally Healthy BCN</label>
 				</div>
 			</form>
 		</section>

@@ -53,7 +53,12 @@ if (menuMeetUs) {
 }
 
 if (cboxLopd && btnSend) {
-  cboxLopd.addEventListener('click', function () {// toggleSendContactBtn();        
+  cboxLopd.addEventListener('change', function () {
+    if (this.checked) {
+      btnSend.classList.remove('hidden');
+    } else {
+      btnSend.classList.add('hidden');
+    }
   }, false);
 }
 
@@ -92,18 +97,6 @@ function toggleMenu() {
     menuBuy.style.zIndex = 1;
     menuCatalog.style.zIndex = 1;
     lang.style.zIndex = 1;
-  }
-}
-
-;
-
-function toggleSendContactBtn() {
-  if (cboxLopd.checked = false) {
-    btnSend.classList.add("hidden");
-    cboxLopd.checked = false;
-  } else {
-    btnSend.classList.remove("hidden");
-    cboxLopd.checked = true;
   }
 }
 

@@ -389,7 +389,7 @@ body {
                     width: 85%;
                     margin-top: 90px;
                     padding-bottom: 20px;
-                    
+
                 }
 
                 @media @media-laptop {
@@ -657,7 +657,7 @@ body {
                 }
             }
 
-            input[type="submit"] {                
+            input[type="submit"] {
                 background: white;
                 color: @color-green;
                 font-family: 'Roboto';
@@ -703,6 +703,7 @@ body {
             .contact-right {
 
                 float: left;
+                width: 100%;
 
                 @media @media-ipad {
                     width: 50%;
@@ -1148,7 +1149,11 @@ body {
 #meetus,
 #products {
     position: relative;
-    top: -@s-menu-h;
+    top: -75px;
+    
+    @media @media-ipad {
+        top: -@s-menu-h;
+    }    
 }
 
 #catalog {
@@ -1192,8 +1197,6 @@ body {
 .page-title {
     display: none;
 }
-
-
 
 img {
     display: block;
@@ -1369,6 +1372,21 @@ a {
 
 .contact-lopd {
     float: left;
+
+    input {
+        @media @media-only-handheld {
+            margin: 0;
+            position: absolute;
+            float: left;
+        }
+    }
+
+    label {
+        @media @media-only-handheld {
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
 }
 
 .document {
